@@ -7,7 +7,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
    
    
-  <link  rel="stylesheet" type="text/css" href="https://ifscsilvani.000webhostapp.com/stylecarroselHOME.css">
+  <link  rel="stylesheet" type="text/css" href="https://realmotos.epizy.com/stylecarroselHOME.css">
+ 
  
 <div id="demo" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">

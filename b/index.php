@@ -7,19 +7,11 @@
 </head>
 <body>
 
-<style>
-		#carrosel{
-		padding-top: 3%;
-		padding-left: 3%;
-		padding-bottom: 3%;
-		width: 100%;
-		height: 100%;
-		background-color: black;		
-	}
+<link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleINDEX.css">
 
-</style>
 
-<?php include 'MontaHtml.php'; ?>
+
+<!-- <?php include 'MontaHtml.php'; ?> -->
 
 <?php include 'menu.php'; ?>
 <?php include 'home.php'; ?>

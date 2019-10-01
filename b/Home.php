@@ -1,29 +1,15 @@
+<section id="home">
 <section id="carrosel">
 <meta charset="utf-8">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <style>
-  /* Make the image fully responsive */
-  
-  .slide{  width: 50%;}
-
-  .carousel-inner img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .carousel-inner h3, .carousel-inner p{
-    color: white;
-    text-shadow: 2px 0px 0px black, 
-                 -2px 0px 0px black, 
-                 0px 2px 0px black, 
-                 0px -2px 0px black;
-    
-  }
-
-  </style>
+   
+   
+  <link  rel="stylesheet" type="text/css" href="https://realmotos.epizy.com/stylecarroselHOME.css">
+ 
+ 
 <div id="demo" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -49,7 +35,7 @@
       <img src="img/3.jpeg" alt="New York">
       <div class="carousel-caption">
         <h3>Fan 150</h3>
-        <p>💰$5.500,00!</p>
+        <p>💰5.500,00!</p>
       </div>   
     </div>
   </div>
@@ -60,4 +46,5 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+</section> 
 </section>

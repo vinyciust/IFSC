@@ -52,7 +52,7 @@
         <p>💰$5.500,00!</p>
       </div>   
     </div>
-  </div>
+  
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>

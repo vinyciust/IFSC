@@ -6,7 +6,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
    
    
-  <?php include 'stylecarroselHOME.css'; ?>
+  <link  rel="stylesheet" type="text/css" href="https://drive.google.com/open?id=1FHwoaRTozDy6zXupUT-bCfi37Hl4ng80">
  
 <div id="demo" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">

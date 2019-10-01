@@ -3,13 +3,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-      
-     #about{ background-color: white;
 
-      color :black;
-}
-    </style>
+<?php include 'styleABOUT.css'?>
+
 <div class="w3-container" style="padding:2% 5%" id="about">
   <h3 class="w3-center">SOBRE REAL MOTOS</h3>
   <p class="w3-center w3-large">Desde 1998 preocupado com seu bem estar </p>

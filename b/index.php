@@ -12,10 +12,12 @@
 		padding-top: 3%;
 		padding-left: 3%;
 		padding-bottom: 3%;
-		width: 100%;
-		height: 100%;
+		width: 50%;
+		height: 50%;
 		background-color: black;		
 	}
+
+	#home{background-color: black;}
 
 </style>
 

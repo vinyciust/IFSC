@@ -46,5 +46,5 @@
     <span class="carousel-control-next-icon"></span>
   </a>
      </div
-   </div>>
+   </div>
 </section>

@@ -4,13 +4,11 @@
 
 <body>
   
-
-  <p:button value="Confirmar" style="width:120px;" image="imagemConfirmar"/>
-
-
+  
+  
 
 <div class="topnav" id="myTopnav">
-  <a id="logo"><i class="fa"></i></a> <!-- Botar a logo via html e editar via css -->
+  <a id="logo"><i class="fa"><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.awsli.com.br%2F600x450%2F210%2F210085%2Fproduto%2F6650122%2Fbandeja-de-aluminio-retangular-37-x-27-x-15-cm-6825c927.jpg&imgrefurl=https%3A%2F%2Fwww.topptable.com.br%2Fbandeja-de-aluminio-retangular-37-x-27-x-15-cm-6650122&docid=69IX5QDSMdrMPM&tbnid=_28BIK_YBoJWFM%3A&vet=10ahUKEwic18iZ7fvkAhWMJ7kGHR3-DxcQMwisASgAMAA..i&w=854&h=450&bih=789&biw=1600&q=bandeja&ved=0ahUKEwic18iZ7fvkAhWMJ7kGHR3-DxcQMwisASgAMAA&iact=mrc&uact=8"/></i></a> <!-- Botar a logo via html e editar via css -->
   <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Inicio</a> 
   <a href="#"><i class="fa fa-fw fa-info-circle" ></i> Sobre</a> 
   <a href="#"><i class="fa fa-fw fa-envelope"></i> Contatos</a> 

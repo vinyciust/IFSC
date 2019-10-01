@@ -1,17 +1,6 @@
 <section>
 <link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleMENU.css">
 
-<style>
-
-#logo{
-
-  background-image: url("img/logo.png");
-  background-size:cover;
-  padding-right: 10%;
- 
- 
-}
-</style>
 
 <body>
 

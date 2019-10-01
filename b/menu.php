@@ -1,14 +1,22 @@
 <section>
 <link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleMENU.css">
 
+<style>
 
+#logo{
 
-
+  background-image: url("img/logo.png");
+  background-size:cover;
+  padding-right: 10%;
+ 
+ 
+}
+</style>
 
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a id="logo"><i class="fa "></i></a> 
+  <a id="logo"><i class="fa"></i></a> <!-- Botar a logo via html e editar via css -->
   <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Inicio</a> 
   <a href="#"><i class="fa fa-fw fa-info-circle" ></i> Sobre</a> 
   <a href="#"><i class="fa fa-fw fa-envelope"></i> Contatos</a> 

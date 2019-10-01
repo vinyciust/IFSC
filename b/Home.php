@@ -34,7 +34,7 @@
         <p>💰$5.500,00!</p>
       </div>   
          </div>
-     </section>
+   </div>
         
       
        
@@ -45,5 +45,5 @@
   <a class="carousel-control-next" href="#demo" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
-   </div>
+   </section>
 </section>

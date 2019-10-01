@@ -35,7 +35,7 @@
       <img src="img/3.jpeg" alt="New York">
       <div class="carousel-caption">
         <h3>Fan 150</h3>
-        <p>💰$5.500,00!</p>
+        <p>💰5.500,00!</p>
       </div>   
     </div>
   </div>

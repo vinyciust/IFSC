@@ -31,22 +31,22 @@
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="item active">
       <img src="img/1.jpeg" alt="Los Angeles">
       <div class="carousel-caption">
         <h3>CB 650 F -2016</h3>
         <p>💰30.900,00!</p>
       </div> 
-      </div>
+     
      </div>
-    <div class="carousel-item">
+    <div class="item">
       <img src="img/2.jpeg" alt="Chicago">
       <div class="carousel-caption">
         <h3>CBROS 150</h3>
         <p>💰6.200,00!</p>
       </div>   
      </div>
-    <div class="carousel-item">
+    <div class="item">
       <img src="img/3.jpeg" alt="New York">
       <div class="carousel-caption">
         <h3>Fan 150</h3>

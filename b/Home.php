@@ -36,7 +36,8 @@
       <div class="carousel-caption">
         <h3>CB 650 F -2016</h3>
         <p>💰30.900,00!</p>
-      </div>   
+      </div> 
+      </div>
      </div>
     <div class="carousel-item">
       <img src="img/2.jpeg" alt="Chicago">

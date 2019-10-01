@@ -4,7 +4,10 @@
 
 <body>
   
+
   <p:button value="Confirmar" style="width:120px;" image="imagemConfirmar"/>
+
+
 
 <div class="topnav" id="myTopnav">
   <a id="logo"><i class="fa"></i></a> <!-- Botar a logo via html e editar via css -->

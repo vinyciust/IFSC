@@ -55,6 +55,7 @@
    </div>
         </div>
         </div>
+      </div>
        
   
   <a class="carousel-control-prev" href="#demo" data-slide="prev">

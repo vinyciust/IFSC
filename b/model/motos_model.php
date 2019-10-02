@@ -13,7 +13,7 @@
 		<?php 
 			require_once("../model/banco.php");
 
-			class Motos extends Banco(){
+			class Motos extends Banco{
 				private $marca;
 				private $valor;
 				private $ano;
@@ -45,23 +45,33 @@
 				return $this->descricao;
 				}
 
-			}
+								
+				
 
-			}
+				public function incluir(){
+					$Conn = new banco();
+					$Conn->conexao();
 
-			$Conn = new banco();
-			$Conn->conexao();
+					$sql = "INSERT INTO moto (Marca, Valor, Ano, Descricao)"." VALUES (".$this->getMarca().','.$this->getValor().','.$this->getAno().','.$this->getDescricao().")";
 
-			public function incluir(){
+					if (mysqli_query ($Conn->conexao(), $sql)) {
+					     
+					      echo "New record created successfully";
+					      return "$sql";
+					} else {
+					      return $t= "Error: " . $sql . "<br>" . mysqli_error($Conn->conexao());
 
-				$sql = "INSERT INTO moto ( Marca, Valor, Ano, Descricao ) VALUES ('Xm', '20000', '2019', 'Uma moto top')";
-				if (mysqli_query ($Conn->conexao(), $sql)) {
-				      echo "New record created successfully";
-				} else {
-				      echo "Error: " . $sql . "<br>" . mysqli_error($Conn->conexao());
+					       /*"$sql";*/
+					}
+					mysqli_close($Conn->conexao());
+
 				}
-				mysqli_close($Conn->conexao());
+
 			}
+
+			
+
+			
 
 			//mkdir(__DIR__.'/nome_da_moto/', 0777, true);
 

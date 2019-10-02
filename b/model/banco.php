@@ -14,12 +14,7 @@ class Banco{
 		//$conectaBD = new mysqli('localhost', 'USUARIO_BD', 'SENHA_BD', 'NOME_BD');
 		$conectaBD = new mysqli($servername, $username, $password,$dbname);
 
-		// Check connection
-		if (!$conectaBD) {
-			die("Connection failed: " . mysqli_connect_error());
-		} else {
-			echo "Connected successfully";
-		}
+		return $conectaBD;
 	}
 }
 

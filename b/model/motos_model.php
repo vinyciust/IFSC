@@ -52,7 +52,8 @@
 					$Conn = new banco();
 					$Conn->conexao();
 
-					$sql = "INSERT INTO moto (Marca, Valor, Ano, Descricao)"." VALUES (".$this->getMarca().','.$this->getValor().','.$this->getAno().','.$this->getDescricao().")";
+					$sql = "INSERT INTO moto (Marca, Valor, Ano, Descricao) VALUES ('".$this->getMarca()."','".$this->getValor()."','".$this->getAno()."','".$this->getDescricao()."')";
+
 
 					if (mysqli_query ($Conn->conexao(), $sql)) {
 					     

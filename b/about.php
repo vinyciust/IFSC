@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link  rel="stylesheet" type="text/css" href="https://realmotos.epizy.com/styleABOUT.css">
+ <link rel="stylesheet" type="text/css" href="https://realmotos.epizy.com/styleABOUT.css">
 
-<div class="w3-container" style="padding:2% 5%" id="about">
+<section class="w3-container" style="padding:2% 5%" id="about">
   <h3 class="w3-center">SOBRE REAL MOTOS</h3>
   <p class="w3-center w3-large">Desde 1998 preocupado com seu bem estar </p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
@@ -30,5 +30,5 @@
       <p>Contamos com a maior varieade de produtos e peças do mercado buscando um serviço de qualidade no mercado.</p>
     </div>
   </div>
-</div>
+</section>
 </section>

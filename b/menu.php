@@ -1,5 +1,5 @@
 <section>
-<link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleMENU.css">
+<link  rel="stylesheet"  href="http://realmotos.epizy.com/styleMENU.css">
 
 
 <body>

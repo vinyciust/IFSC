@@ -1,5 +1,8 @@
 <section>
-<link  rel="stylesheet"  href="http://realmotos.epizy.com/styleMENU.css">
+
+<link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleMENU.css">
+<?php include 'C:/xampp/htdocs/IFSC/htdocsa/styleMENU.css'; ?>
+
 
 
 <body>

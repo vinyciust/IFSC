@@ -1,6 +1,6 @@
 <section>
 
-<link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleMENU.css">
+<link  rel="stylesheet"  href="http://realmotos.epizy.com/styleMENU.css">
 
 <div class="topnav" id="myTopnav">
   <a id="logo"><i class="fa"><img src="https://imgur.com/a/fIQC0sK"/></i></a> <!-- Botar a logo via html e editar via css -->

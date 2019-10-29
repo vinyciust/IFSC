@@ -1,14 +1,6 @@
 <section>
 
 <link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleMENU.css">
-<?php include 'C:/xampp/htdocs/IFSC/htdocsa/styleMENU.css'; ?>
-
-
-
-<body>
-  
-  
-  
 
 <div class="topnav" id="myTopnav">
   <a id="logo"><i class="fa"><img src="https://imgur.com/a/fIQC0sK"/></i></a> <!-- Botar a logo via html e editar via css -->
@@ -41,6 +33,4 @@ function myFunction() {
   }
 }
 </script>
-
-</body>
 </section>

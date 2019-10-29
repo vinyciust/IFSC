@@ -4,11 +4,11 @@
 		<title></title>
 	</head>
 	<body>
-		<form method="post" enctype="multipart/form-data">
+		<!--<form method="post" enctype="multipart/form-data">
 		   Selecione uma imagem: <input name="arquivo" type="file" />
 		   <br />
 		   <input type="submit" value="Salvar" />
-		</form>
+		</form>-->
 		
 		<?php 
 			require_once("../model/banco.php");

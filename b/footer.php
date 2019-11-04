@@ -1,7 +1,4 @@
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Muli:300,400" rel="stylesheet">
-
+  <section id="footer">
 
 
   <!--
@@ -1532,6 +1529,7 @@ h1, h2, h3, h4, h5,
 
 
 </style>
+
 <div class="footer">
       <div class="container">
         <div class="row">
@@ -1577,3 +1575,6 @@ h1, h2, h3, h4, h5,
         </div>
       </div>
     </div>
+    </section>
+    </body>
+    </html>

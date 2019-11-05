@@ -28,7 +28,7 @@
 
 
 <nav class="topnav" id="myTopnav">
-  <a id="logo"><i class="fa"><img src="localhost/IFSC/b/img/logo"/></i></a> <!-- Botar a logo via html e editar via css -->
+  <a id="logo"><i class="fa"><img src="https://imgur.com/a/fIQC0sK"/></i></a> <!-- Botar a logo via html e editar via css -->
   <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Inicio</a> 
   <a href="#"><i class="fa fa-fw fa-info-circle" ></i> Sobre</a> 
   <a href="#"><i class="fa fa-fw fa-envelope"></i> Contatos</a> 

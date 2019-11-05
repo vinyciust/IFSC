@@ -13,7 +13,6 @@
   
 </footer>
 -->
-<link  rel="stylesheet" type="text/css" href="http://realmotos.epizy.com/styleFooter.css">
 
 <div class="footer">
       <div class="container">

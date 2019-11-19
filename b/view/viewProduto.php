@@ -10,13 +10,13 @@ include 'menu.php';
       
         <!--carrossel-->
 
-<div id="demo" class="carousel slide_produto" data-ride="carousel">
+<div id="demo" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
-  <div class="carousel-inner_produto">
+  <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="img/img1.jpg" alt="Los Angeles">
       <div class="carousel-caption">

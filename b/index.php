@@ -1,8 +1,8 @@
 <?php 
-include 'menu.php';  
-include 'home.php'; 
-include 'about.php'; 
-include 'footer.php';
+include 'view\menu.php';  
+include 'view\home.php'; 
+include 'view\about.php'; 
+include 'view\footer.php';
 
 
 ?>

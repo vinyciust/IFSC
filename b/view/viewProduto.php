@@ -6,17 +6,17 @@ include : 'menu.php';
 
 <section id="Produto">
 
-		<section id="Carrousel_view_motos">
-			
-				<!--carrossel-->
+    <section id="Carrousel_view_motos">
+      
+        <!--carrossel-->
 
-<div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo" class="carousel slide_produto" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
-  <div class="carousel-inner">
+  <div class="carousel-inner_produto">
     <div class="carousel-item active">
       <img src="img1.jpg" alt="Los Angeles">
       <div class="carousel-caption">
@@ -48,21 +48,21 @@ include : 'menu.php';
 </div>
 
 <section id="aside_carrousel">
-	
-		<article>
-			<h3>Nome da Moto: </h3>
-			<h3>Valor:</h3>
-			<h3>Descrição</h3>
+  
+    <article>
+      <h3>Nome da Moto: </h3>
+      <h3>Valor:</h3>
+      <h3>Descrição</h3>
 
-		</article>
-
-
-		<article>
-				
-			<a href="index.php">COMPRAR</a>	
+    </article>
 
 
-		</article>
+    <article>
+        
+      <a href="index.php">COMPRAR</a> 
+
+
+    </article>
 
  </section>
 </section>

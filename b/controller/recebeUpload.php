@@ -1,11 +1,12 @@
  <?php
     
     class SalvaImagem {
+    
+        require_once("../model/motos_model.php");
 
         public function imagens(){
 
             include("conexaoTeste.php");
-            require_once("../model/motos_model.php")
             
             $msg = false;
             

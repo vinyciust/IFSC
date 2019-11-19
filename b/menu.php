@@ -27,15 +27,15 @@
 <header id="Menu">
 
 
-<nav class="navbar">
+<nav class="MenuNavReal">
  <a id="logo"><i class="fa"><img src="https://imgur.com/a/fIQC0sK"/></i></a> <!-- Botar a logo via html e editar via css -->
   <a href="#home">Home</a>
   <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
+  <div class="dropdownReal">
+    <button class="dropbtnReal">Drop 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdownReal-content">
       <a href="#">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>

@@ -4,11 +4,7 @@
 		<title></title>
 	</head>
 	<body>
-		<form method="post" enctype="multipart/form-data" action="recebeUpload.php">
-   			Selecione uma imagem: <input name="arquivo" type="file" />
-   			<br />
-   			<input type="submit" value="Salvar" />
-		</form>
+		
 
 		<?php 
 		
@@ -19,6 +15,7 @@
 				private $valor;
 				private $ano;
 				private $descricao;
+				private $modelo;
 
 				public function setMarca($string) {
 				$this->marca = $string;
@@ -31,6 +28,9 @@
 				}
 				public function setDescricao($string) {
 				$this->descricao = $string;
+				}
+				public function setModelo($string) {
+				$this->modelo = $string;
 				}
 
 				public function getMarca() {
@@ -45,6 +45,9 @@
 				public function getDescricao() {
 				return $this->descricao;
 				}
+				public function getModelo() {
+				return $this->modelo;
+				}
 
 								
 				
@@ -53,7 +56,7 @@
 					$Conn = new banco();
 					$Conn->conexao();
 
-					$sql = "INSERT INTO moto (Marca, Valor, Ano, Descricao) VALUES ('".$this->getMarca()."','".$this->getValor()."','".$this->getAno()."','".$this->getDescricao()."')";
+					$sql = "INSERT INTO moto (Marca, Valor, Ano, Descricao, Modelo) VALUES ('".$this->getMarca()."','".$this->getValor()."','".$this->getAno()."','".$this->getDescricao()."','".$this->getModelo()."')";
 
 
 					if (mysqli_query ($Conn->conexao(), $sql)) {

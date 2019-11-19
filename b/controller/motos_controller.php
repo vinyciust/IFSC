@@ -19,6 +19,7 @@ class CadastroMotos {
 		$this->cadastro->setValor($_POST['valor']);
 		$this->cadastro->setAno($_POST['ano']);
 		$this->cadastro->setDescricao($_POST['descricao']);
+		$this->cadastro->setModelo($_POST['modelo']);
 		$result = $this->cadastro->incluir();
 
 		if($result >=1) {

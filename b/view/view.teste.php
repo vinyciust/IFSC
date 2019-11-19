@@ -16,7 +16,8 @@
 		Marca: 					<input type="text" name="marca"><br />
 		Valor:				    <input type="text" name="valor" ><br />
 		Ano:    				<input type="text" name="ano"><br />		
-		Descrição:   			<input type="text" name="descricao"><br />		
+		Descrição:   			<input type="text" name="descricao"><br />	
+		Modelo:   				<input type="text" name="modelo"><br />		
 
 		<input type="hidden" name="acao" value="incluir">
 		

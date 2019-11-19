@@ -1,4 +1,4 @@
-<?php
+    <?php
     
     include("conexaoTeste.php");
     
@@ -9,7 +9,9 @@
      for ($i=0; $i <5 ; $i++) { 
             # code...
         if (isset($_FILES['arquivo'.$i])) {
-            $extensao = strtolower(substr($_FILES['arquivo'.$i]['name'], -4));
+            
+           
+            $extensao =".png";
             $novo_nome = 'img' .$i.$extensao;
             //mkdir(__DIR__.'/imagens/nome_da_moto/', 0777, true);
             $diretorio = "imagens/nome_da_moto/";
@@ -17,12 +19,12 @@
 
             move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
 
-            $sql_code = "INSERT INTO arquivo (codigo, arquivo, data) VALUES(null, '$novo_nome', NOW())";
+            //$sql_code = "INSERT INTO arquivo (codigo, arquivo, data) VALUES(null, '$novo_nome', NOW())";
 
-            if ($mysqli->query($sql_code))
-                $msg = "Arquivo salvo com sucesso.";
-            else
-                $msg = "Erro ao enviar arquivo.";   
+            //if ($mysqli->query($sql_code))
+                //$msg = "Arquivo salvo com sucesso.";
+            //else
+               // $msg = "Erro ao enviar arquivo.";   
         }
     }
     

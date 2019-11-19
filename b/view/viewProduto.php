@@ -18,21 +18,21 @@ include 'menu.php';
   </ul>
   <div class="carousel-inner_produto">
     <div class="carousel-item active">
-      <img src="img1.jpg" alt="Los Angeles">
+      <img src="img/img1.jpg" alt="Los Angeles">
       <div class="carousel-caption">
         <h3>CB 650 F -2016</h3>
         <p>💰30.900,00!</p>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="img2.jpg" alt="Chicago">
+      <img src="img/img2.jpg" alt="Chicago">
       <div class="carousel-caption">
         <h3>CBROS 150</h3>
         <p>💰6.200,00!</p>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="img3.jpg" alt="New York">
+      <img src="img/img3.jpg" alt="New York">
       <div class="carousel-caption">
         <h3>Fan 150</h3>
         <p>💰5.500,00!</p>

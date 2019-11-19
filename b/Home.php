@@ -13,7 +13,7 @@
     <div class="carousel-item active">
       <img src="img/1.jpeg" alt="Los Angeles">
       <div class="carousel-caption">
-        <h3>CB 650 F -2016</h3>
+        <h3>CB 650 F - 2016</h3>
         <p>💰30.900,00!</p>
       </div>   
     </div>
@@ -39,5 +39,6 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+<section id=""></section>
 </section> 
 </section>

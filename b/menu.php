@@ -19,6 +19,7 @@
 <link rel="stylesheet" type="text/css" href="https://realmotosserver.000webhostapp.com/htdocs/styleABOUT.css">
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Muli:300,400" rel="stylesheet">
 <link  rel="stylesheet" type="text/css" href="https://realmotosserver.000webhostapp.com/htdocs/styleFooter.css">
+<link  rel="stylesheet" type="text/css" href="https://realmotosserver.000webhostapp.com/htdocs/styleCarroselTesteIndex.css">
 
 </head>
 

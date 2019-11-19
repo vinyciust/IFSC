@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Teste View Moto</title>
-	
-<link  rel="stylesheet" type="text/css" href="https://realmotosserver.000webhostapp.com/htdocs/styleCarroselTesteIndex.css">
+<?php  
 
-</style>
-</head>
+include : 'menu.php';
 
+?>
 
-<body>
+<section id="Produto">
 
 		<section id="Carrousel_view_motos">
 			
@@ -72,19 +67,16 @@
  </section>
 </section>
 
+
+
+
+</section>
 <?php
-<section id="about">
-	
-		include 'about.php'; 
 
-</section>
-<section id="footer">
-	
-		include 'footer.php';
+  
+    include 'about.php'; 
 
-</section>
+    include 'footer.php';
+
+
 ?>
-
-
-</body>
-</html>

@@ -29,7 +29,7 @@
 
 
 <nav class="MenuNavReal">
- <a id="logo"><i class="fa"><img src="https://imgur.com/a/fIQC0sK"/></i></a> <!-- Botar a logo via html e editar via css -->
+ <a id="logo"><i class="fa"><img src="https://images.app.goo.gl/zM1DiRC3Bg6tNzBd6"/></i></a> <!-- Botar a logo via html e editar via css -->
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <div class="dropdownReal">

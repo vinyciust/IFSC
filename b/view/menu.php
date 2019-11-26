@@ -21,6 +21,17 @@
 <link  rel="stylesheet" type="text/css" href="https://realmotosserver.000webhostapp.com/htdocs/styleFooter.css">
 <link  rel="stylesheet" type="text/css" href="https://realmotosserver.000webhostapp.com/htdocs/styleCarroselTesteIndex.css">
 
+
+
+<!-- Algular -->
+<script src="jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="jquery.dataTables.min.js"></script>
+    <script src="angular-datatables.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="datatables.bootstrap.css">
+
 </head>
 
 <body style="color: black">

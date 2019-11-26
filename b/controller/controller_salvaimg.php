@@ -38,19 +38,14 @@
                     
                 }
 
-            //$sql_code = "INSERT INTO arquivo (codigo, arquivo, data) VALUES(null, '$novo_nome', NOW())";
-
-            //if ($mysqli->query($sql_code))
-                //$msg = "Arquivo salvo com sucesso.";
-            //else
-               // $msg = "Erro ao enviar arquivo.";   
+            
         }
     }
     $msg = false;
     
 ?>
 
-    <h1>Upload de arquivos</h1>
+    <!--<h1>Upload de arquivos</h1>
     
     <?php if ($msg != false) {
         echo "<p> $msg </p>"; }
@@ -60,7 +55,7 @@
         $obj1->imagens();
     ?>
 
-    <form action="recebeUpload.php" method="post" enctype="multipart/form-data">
+    <form action="controller_salvaimg.php" method="POST" enctype="multipart/form-data">
         Arquivo: <input type="file" required name="arquivo0"> </br>
         Arquivo: <input type="file" required name="arquivo1"></br>
         Arquivo: <input type="file" required name="arquivo2"></br>
@@ -70,7 +65,7 @@
         <input type="submit" value="Salvar">
 
 
-    </form>
+    </form> -->
 
 
 

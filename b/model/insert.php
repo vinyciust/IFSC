@@ -3,7 +3,7 @@
 //insert.php
 
 require_once("../model/banco.php");
-$connect = new banco();
+$connect = new banco()->conexao;
 $form_data = json_decode(file_get_contents("php://input"));
 
 $error = '';

@@ -24,13 +24,12 @@
 
 
 <!-- Algular -->
-<script src="jquery.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="jquery.dataTables.min.js"></script>
-    <script src="angular-datatables.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="datatables.bootstrap.css">
+    <script src="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/jquery.dataTables.min.js"></script>
+    <script src="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/angular-datatables.min.js"></script>
+    <link rel="stylesheet" href="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/datatables.bootstrap.css">
+    <link rel="stylesheet" href="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/jquery.dataTables.min.css">
 
 </head>
 

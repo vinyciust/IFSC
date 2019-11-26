@@ -10,6 +10,12 @@
         $obj1->imagens();
     ?>
 
+            <div align="right">
+                <button type="button" name="add_button" ng-click="addData()" class="btn btn-success">Add</button>
+            </div>
+
+
+
     <div align="right">
     <button type="button" name="add_button" ng-click="addData()" class="btn btn-success">Add</button>
    </div>

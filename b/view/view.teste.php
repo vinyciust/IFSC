@@ -87,7 +87,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.error = false;
 
 	$scope.fetchData = function(){
-		$http.get('fetch_data.php').success(function(data){
+		$http.get('../controller/fetch_data.php').success(function(data){
 			$scope.namesData = data;
 		});
 	};
@@ -111,7 +111,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.submitForm = function(){
 		$http({
 			method:"POST",
-			url:"insert.php",
+			url:"../model/insert.php",
 			data:{'first_name':$scope.first_name, 'last_name':$scope.last_name, 'action':$scope.submit_button, 'id':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
@@ -135,7 +135,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.fetchSingleData = function(id){
 		$http({
 			method:"POST",
-			url:"insert.php",
+			url:"../model/insert.php",
 			data:{'id':id, 'action':'fetch_single_data'}
 		}).success(function(data){
 			$scope.first_name = data.first_name;
@@ -152,7 +152,7 @@ app.controller('crudController', function($scope, $http){
 		{
 			$http({
 				method:"POST",
-				url:"insert.php",
+				url:"../model/insert.php",
 				data:{'id':id, 'action':'Delete'}
 			}).success(function(data){
 				$scope.success = true;

@@ -4,7 +4,7 @@
 
 //require_once("../model/banco.php");
 //$connect = new banco()->conexao;
-$connect = new PDO("mysql:host=localhost;dbname=testing", "root", "silvani");
+$connect = new PDO("mysql:host=localhost;dbname=realmotos", "root", "");
 
 $form_data = json_decode(file_get_contents("php://input"));
 

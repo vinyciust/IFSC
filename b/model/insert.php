@@ -98,11 +98,12 @@ else
 			$data = array(
 				':first_name'	=>	$first_name,
 				':last_name'	=>	$last_name,
+				':teste'			=>	$teste,
 				':id'			=>	$form_data->id
 			);
 			$query = "
 			UPDATE tbl_sample 
-			SET first_name = :first_name, last_name = :last_name, teste = :teste 
+			SET first_name = :first_name, last_name = :last_name, teste = :teste
 			WHERE id = :id
 			";
 

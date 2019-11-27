@@ -14,6 +14,7 @@ $message = '';
 $validation_error = '';
 $first_name = '';
 $last_name = '';
+$teste = '';
 
 if($form_data->action == 'fetch_single_data')
 {
@@ -25,6 +26,7 @@ if($form_data->action == 'fetch_single_data')
 	{
 		$output['first_name'] = $row['first_name'];
 		$output['last_name'] = $row['last_name'];
+		$output['teste'] = $row['teste'];
 	}
 }
 elseif($form_data->action == "Delete")

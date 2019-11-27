@@ -21,6 +21,7 @@ include 'menu.php';  ?>
 						<tr>
 							<th>First Name</th>
 							<th>Last Name</th>
+							<th>Teste</th>
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>

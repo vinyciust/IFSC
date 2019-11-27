@@ -94,7 +94,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.error = false;
 
 	$scope.fetchData = function(){
-		$http.get('../controller/fetch_data.php').success(function(data){
+		$http.get('../controller/motosController.php').success(function(data){
 			$scope.namesData = data;
 		});
 	};
@@ -118,7 +118,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.submitForm = function(){
 		$http({
 			method:"POST",
-			url:"../model/insert.php",
+			url:"../model/motosModel.php",
 			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
@@ -142,7 +142,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.fetchSingleData = function(idMoto){
 		$http({
 			method:"POST",
-			url:"../model/insert.php",
+			url:"../model/motosModel.php",
 			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
 		}).success(function(data){
 			$scope.Nome = data.Nome;
@@ -161,7 +161,7 @@ app.controller('crudController', function($scope, $http){
 		{
 			$http({
 				method:"POST",
-				url:"../model/insert.php",
+				url:"../model/motosModel.php",
 				data:{'idMoto':idMoto, 'action':'Delete'}
 			}).success(function(data){
 				$scope.success = true;

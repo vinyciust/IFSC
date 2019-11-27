@@ -77,8 +77,8 @@ else
 		{
 			$data = array(
 				':first_name'		=>	$first_name,
-				':last_name'		=>	$last_name
-				':teste'		=>	$teste,
+				':last_name'		=>	$last_name,
+				':teste'		=>	$teste
 
 			);
 			$query = "

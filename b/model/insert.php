@@ -12,9 +12,9 @@ $form_data = json_decode(file_get_contents("php://input"));
 $error = '';
 $message = '';
 $validMotoation_error = '';
-$first_name = '';
-$last_name = '';
-$teste = '';
+$Nome = '';
+$Valor = '';
+$Ano = '';
 
 if($form_data->action == 'fetch_single_data')
 {
@@ -24,9 +24,9 @@ if($form_data->action == 'fetch_single_data')
 	$result = $statement->fetchAll();
 	foreach($result as $row)
 	{
-		$output['first_name'] = $row['first_name'];
-		$output['last_name'] = $row['last_name'];
-		$output['teste'] = $row['teste'];
+		$output['Nome'] = $row['Nome'];
+		$output['Valor'] = $row['Valor'];
+		$output['Ano'] = $row['Ano'];
 	}
 }
 elseif($form_data->action == "Delete")
@@ -42,31 +42,31 @@ elseif($form_data->action == "Delete")
 }
 else
 {
-	if(empty($form_data->first_name))
+	if(empty($form_data->Nome))
 	{
 		$error[] = 'First Name is Required';
 	}
 	else
 	{
-		$first_name = $form_data->first_name;
+		$Nome = $form_data->Nome;
 	}
 
-	if(empty($form_data->last_name))
+	if(empty($form_data->Valor))
 	{
 		$error[] = 'Last Name is Required';
 	}
 	else
 	{
-		$last_name = $form_data->last_name;
+		$Valor = $form_data->Valor;
 	}
 
-	if(empty($form_data->teste))
+	if(empty($form_data->Ano))
 	{
-		$error[] = 'Teste is Required';
+		$error[] = 'Ano is Required';
 	}
 	else
 	{
-		$teste = $form_data->teste;
+		$Ano = $form_data->Ano;
 	}
 
 
@@ -76,15 +76,15 @@ else
 		if($form_data->action == 'Insert')
 		{
 			$data = array(
-				':first_name'		=>	$first_name,
-				':last_name'		=>	$last_name,
-				':teste'		=>	$teste
+				':Nome'		=>	$Nome,
+				':Valor'		=>	$Valor,
+				':Ano'		=>	$Ano
 
 			);
 			$query = "
 			INSERT INTO moto 
-				(first_name, last_name, teste) VALUES 
-				(:first_name, :last_name,:teste)
+				(Nome, Valor, Ano) VALUES 
+				(:Nome, :Valor,:Ano)
 
 			";
 			$statement = $connect->prepare($query);
@@ -96,14 +96,14 @@ else
 		if($form_data->action == 'Edit')
 		{
 			$data = array(
-				':first_name'	=>	$first_name,
-				':last_name'	=>	$last_name,
-				':teste'			=>	$teste,
+				':Nome'	=>	$Nome,
+				':Valor'	=>	$Valor,
+				':Ano'			=>	$Ano,
 				':idMoto'			=>	$form_data->idMoto
 			);
 			$query = "
 			UPDATE moto 
-			SET first_name = :first_name, last_name = :last_name, teste = :teste
+			SET Nome = :Nome, Valor = :Valor, Ano = :Ano
 			WHERE idMoto = :idMoto
 			";
 

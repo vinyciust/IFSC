@@ -21,16 +21,16 @@ include 'menu.php';  ?>
 						<tr>
 							<th>First Name</th>
 							<th>Last Name</th>
-							<th>Teste</th>
+							<th>Ano</th>
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="name in namesData">
-							<td>{{name.first_name}}</td>
-							<td>{{name.last_name}}</td>
-							<td>{{name.teste}}</td>
+							<td>{{name.Nome}}</td>
+							<td>{{name.Valor}}</td>
+							<td>{{name.Ano}}</td>
 							<td><button type="button" ng-click="fetchSingleData(name.id)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.id)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -57,15 +57,15 @@ include 'menu.php';  ?>
 					</div>
 					<div class="form-group">
 						<label>Enter First Name</label>
-						<input type="text" name="first_name" ng-model="first_name" class="form-control" />
+						<input type="text" name="Nome" ng-model="Nome" class="form-control" />
 					</div>
 					<div class="form-group">
 						<label>Enter Last Name</label>
-						<input type="text" name="last_name" ng-model="last_name" class="form-control" />
+						<input type="text" name="Valor" ng-model="Valor" class="form-control" />
 					</div>
 					<div class="form-group">
-						<label>Enter Teste</label>
-						<input type="text" name="teste" ng-model="teste" class="form-control" />
+						<label>Enter Ano</label>
+						<input type="text" name="Ano" ng-model="Ano" class="form-control" />
 					</div>
 	      		</div>
 	      		<div class="modal-footer">
@@ -113,7 +113,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/insert.php",
-			data:{'first_name':$scope.first_name, 'last_name':$scope.last_name,'teste':$scope.teste, 'action':$scope.submit_button, 'id':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano, 'action':$scope.submit_button, 'id':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -139,9 +139,9 @@ app.controller('crudController', function($scope, $http){
 			url:"../model/insert.php",
 			data:{'id':id, 'action':'fetch_single_data'}
 		}).success(function(data){
-			$scope.first_name = data.first_name;
-			$scope.last_name = data.last_name;
-			$scope.teste = data.teste;
+			$scope.Nome = data.Nome;
+			$scope.Valor = data.Valor;
+			$scope.Ano = data.Ano;
 			$scope.hidden_id = id;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';

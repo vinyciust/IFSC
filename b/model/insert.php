@@ -3,7 +3,9 @@
 //insert.php
 
 require_once("../model/banco.php");
-$connect = new banco()->conexao();
+$connect = new banco();
+$connect = $connect->angular();
+
 
 $form_data = json_decode(file_get_contents("php://input"));
 

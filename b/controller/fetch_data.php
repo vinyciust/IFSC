@@ -3,9 +3,8 @@
 //fetch_data.php
  
 require_once("../model/banco.php");
-$connect = new PDO("mysql:host=localhost;dbname=realmotos", "root", "");
-$teste = new banco();
-$teste = $teste->conexao();
+$connect = new banco();
+$connect = $connect->angular();
 $query = "SELECT * FROM tbl_sample ORDER BY id";
 $statement = $connect->query($query);
 

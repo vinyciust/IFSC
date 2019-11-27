@@ -17,6 +17,15 @@ class Banco{
 		
 		return $connect;
 	}
+
+	function angular(){
+
+		$connect = new PDO("mysql:host=localhost;dbname=realmotos", "root", "");
+
+     	return $connect ;
+
+
+	}
 }
 
 ?>

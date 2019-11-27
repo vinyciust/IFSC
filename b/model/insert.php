@@ -11,14 +11,14 @@ $form_data = json_decode(file_get_contents("php://input"));
 
 $error = '';
 $message = '';
-$validation_error = '';
+$validMotoation_error = '';
 $first_name = '';
 $last_name = '';
 $teste = '';
 
 if($form_data->action == 'fetch_single_data')
 {
-	$query = "SELECT * FROM tbl_sample WHERE id='".$form_data->id."'";
+	$query = "SELECT * FROM moto WHERE idMoto='".$form_data->idMoto."'";
 	$statement = $connect->prepare($query);
 	$statement->execute();
 	$result = $statement->fetchAll();
@@ -32,7 +32,7 @@ if($form_data->action == 'fetch_single_data')
 elseif($form_data->action == "Delete")
 {
 	$query = "
-	DELETE FROM tbl_sample WHERE id='".$form_data->id."'
+	DELETE FROM moto WHERE idMoto='".$form_data->idMoto."'
 	";
 	$statement = $connect->prepare($query);
 	if($statement->execute())
@@ -82,7 +82,7 @@ else
 
 			);
 			$query = "
-			INSERT INTO tbl_sample 
+			INSERT INTO moto 
 				(first_name, last_name, teste) VALUES 
 				(:first_name, :last_name,:teste)
 
@@ -99,12 +99,12 @@ else
 				':first_name'	=>	$first_name,
 				':last_name'	=>	$last_name,
 				':teste'			=>	$teste,
-				':id'			=>	$form_data->id
+				':idMoto'			=>	$form_data->idMoto
 			);
 			$query = "
-			UPDATE tbl_sample 
+			UPDATE moto 
 			SET first_name = :first_name, last_name = :last_name, teste = :teste
-			WHERE id = :id
+			WHERE idMoto = :idMoto
 			";
 
 			$statement = $connect->prepare($query);
@@ -116,11 +116,11 @@ else
 	} 
 	else
 	{
-		$validation_error = implode(", ", $error);
+		$validMotoation_error = implode(", ", $error);
 	}
 
 	$output = array(
-		'error'		=>	$validation_error,
+		'error'		=>	$validMotoation_error,
 		'message'	=>	$message
 	);
 

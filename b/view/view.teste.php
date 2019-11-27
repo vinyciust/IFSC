@@ -113,7 +113,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/insert.php",
-			data:{'first_name':$scope.first_name, 'last_name':$scope.last_name,'teste':$scope.last_name, 'action':$scope.submit_button, 'id':$scope.hidden_id}
+			data:{'first_name':$scope.first_name, 'last_name':$scope.last_name,'teste':$scope.teste, 'action':$scope.submit_button, 'id':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{

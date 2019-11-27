@@ -2,9 +2,8 @@
 
 //insert.php
 
-//require_once("../model/banco.php");
-//$connect = new banco()->conexao;
-$connect = new PDO("mysql:host=localhost;dbname=realmotos", "root", "");
+require_once("../model/banco.php");
+$connect = new banco()->conexao();
 
 $form_data = json_decode(file_get_contents("php://input"));
 

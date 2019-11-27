@@ -22,6 +22,7 @@ include 'menu.php';  ?>
 							<th>Nome</th>
 							<th>Valor</th>
 							<th>Ano</th>
+							<th>Descrição</th>
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>
@@ -31,6 +32,7 @@ include 'menu.php';  ?>
 							<td>{{name.Nome}}</td>
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
+							<td>{{name.Descricao}}</td>
 							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -66,6 +68,10 @@ include 'menu.php';  ?>
 					<div class="form-group">
 						<label>Enter Ano</label>
 						<input type="text" name="Ano" ng-model="Ano" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label>Enter Descrição</label>
+						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
 					</div>
 	      		</div>
 	      		<div class="modal-footer">
@@ -113,7 +119,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/insert.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -142,6 +148,7 @@ app.controller('crudController', function($scope, $http){
 			$scope.Nome = data.Nome;
 			$scope.Valor = data.Valor;
 			$scope.Ano = data.Ano;
+			$scope.Descricao = data.Descricao;
 			$scope.hidden_id = idMoto;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';

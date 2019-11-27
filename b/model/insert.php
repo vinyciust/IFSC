@@ -15,6 +15,7 @@ $validMotoation_error = '';
 $Nome = '';
 $Valor = '';
 $Ano = '';
+$Descricao = '';
 
 if($form_data->action == 'fetch_single_data')
 {
@@ -27,6 +28,7 @@ if($form_data->action == 'fetch_single_data')
 		$output['Nome'] = $row['Nome'];
 		$output['Valor'] = $row['Valor'];
 		$output['Ano'] = $row['Ano'];
+		$output['Descricao'] = $row['Descricao'];
 	}
 }
 elseif($form_data->action == "Delete")
@@ -62,11 +64,19 @@ else
 
 	if(empty($form_data->Ano))
 	{
-		$error[] = 'Ano is Required';
+		$error[] = 'Descricao is Required';
 	}
 	else
 	{
 		$Ano = $form_data->Ano;
+	}
+	if(empty($form_data->Descricao))
+	{
+		$error[] = 'Descricao is Required';
+	}
+	else
+	{
+		$Descricao = $form_data->Descricao;
 	}
 
 
@@ -78,13 +88,14 @@ else
 			$data = array(
 				':Nome'		=>	$Nome,
 				':Valor'		=>	$Valor,
-				':Ano'		=>	$Ano
+				':Ano'		=>	$Ano,
+				':Descricao'		=>	$Descricao
 
 			);
 			$query = "
 			INSERT INTO moto 
-				(Nome, Valor, Ano) VALUES 
-				(:Nome, :Valor,:Ano)
+				(Nome, Valor, Ano, Descricao) VALUES 
+				(:Nome, :Valor,:Ano, :Descricao)
 
 			";
 			$statement = $connect->prepare($query);
@@ -99,11 +110,12 @@ else
 				':Nome'	=>	$Nome,
 				':Valor'	=>	$Valor,
 				':Ano'			=>	$Ano,
+				':Descricao'	=>	$Descricao,
 				':idMoto'			=>	$form_data->idMoto
 			);
 			$query = "
 			UPDATE moto 
-			SET Nome = :Nome, Valor = :Valor, Ano = :Ano
+			SET Nome = :Nome, Valor = :Valor, Ano = :Ano, Descricao = :Descricao
 			WHERE idMoto = :idMoto
 			";
 

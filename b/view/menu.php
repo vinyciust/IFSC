@@ -42,7 +42,7 @@
 
 
 <nav class="MenuNavReal">
- <a id="logo"><i class="fa"><img src="https://images.app.goo.gl/zM1DiRC3Bg6tNzBd6"/></i></a> <!-- Botar a logo via html e editar via css -->
+ <a id="logo"><i class="fa"><img src="https://scontent.fxap3-1.fna.fbcdn.net/v/t1.0-9/27973392_358211404681466_4613216062072862129_n.png?_nc_cat=104&_nc_ohc=ETe50krQSEUAQkQjJlwcikGWGZllToPbpHONt2TS6kNn6hgGVvTcmHkCA&_nc_ht=scontent.fxap3-1.fna&oh=b3913bcbd9e83c8d455decbdfab87ea8&oe=5E835125"/></i></a> <!-- Botar a logo via html e editar via css -->
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <div class="dropdownReal">

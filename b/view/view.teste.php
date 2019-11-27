@@ -1,15 +1,11 @@
 <?php 
 include 'menu.php';  ?>
 
-
-
- 
-
  <body ng-app="crudApp" ng-controller="crudController">
 		
 		<div class="container" ng-init="fetchData()">
 			<br />
-				<h3 align="center">AngularJS PHP CRUD (Create, Read, Update, Delete) using Bootstrap Modal</h3>
+				<h3 align="center">Tela de cadastro</h3>
 			<br />
 			<div class="alert alert-success alert-dismissible" ng-show="success" >
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -44,7 +40,7 @@ include 'menu.php';  ?>
 	</body>
 
 
-	<section class="modal fade" tabindex="-1" role="dialog" id="crudmodal">
+<div class="modal fade" tabindex="-1" role="dialog" id="crudmodal">
 	<div class="modal-dialog" role="document">
     	<div class="modal-content">
     		<form method="post" ng-submit="submitForm()">
@@ -74,8 +70,7 @@ include 'menu.php';  ?>
 	        </form>
     	</div>
   	</div>
-</section>
-
+</div>
 
 <script>
 
@@ -166,7 +161,6 @@ app.controller('crudController', function($scope, $http){
 });
 
 </script>
-
 
 
 

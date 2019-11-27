@@ -5,7 +5,7 @@ include 'menu.php';  ?>
 
  
 
- <SECTION ng-app="crudApp" ng-controller="crudController">
+ <body ng-app="crudApp" ng-controller="crudController">
 		
 		<div class="container" ng-init="fetchData()">
 			<br />
@@ -41,7 +41,7 @@ include 'menu.php';  ?>
 			</div>
 
 		</div>
-	</SECTION>
+	</body>
 
 
 	<section class="modal fade" tabindex="-1" role="dialog" id="crudmodal">

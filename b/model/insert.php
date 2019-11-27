@@ -96,7 +96,7 @@ else
 				$message = 'Data Edited';
 			}
 		}
-	}
+	} 
 	else
 	{
 		$validation_error = implode(", ", $error);

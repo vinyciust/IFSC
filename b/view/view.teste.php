@@ -30,6 +30,7 @@ include 'menu.php';  ?>
 						<tr ng-repeat="name in namesData">
 							<td>{{name.first_name}}</td>
 							<td>{{name.last_name}}</td>
+							<td>{{name.teste}}</td>
 							<td><button type="button" ng-click="fetchSingleData(name.id)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.id)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -61,6 +62,10 @@ include 'menu.php';  ?>
 					<div class="form-group">
 						<label>Enter Last Name</label>
 						<input type="text" name="last_name" ng-model="last_name" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label>Enter Teste</label>
+						<input type="text" name="teste" ng-model="teste" class="form-control" />
 					</div>
 	      		</div>
 	      		<div class="modal-footer">
@@ -108,7 +113,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/insert.php",
-			data:{'first_name':$scope.first_name, 'last_name':$scope.last_name, 'action':$scope.submit_button, 'id':$scope.hidden_id}
+			data:{'first_name':$scope.first_name, 'last_name':$scope.last_name,'teste':$scope.last_name, 'action':$scope.submit_button, 'id':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -136,6 +141,7 @@ app.controller('crudController', function($scope, $http){
 		}).success(function(data){
 			$scope.first_name = data.first_name;
 			$scope.last_name = data.last_name;
+			$scope.teste = data.teste;
 			$scope.hidden_id = id;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';

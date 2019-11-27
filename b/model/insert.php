@@ -60,6 +60,17 @@ else
 		$last_name = $form_data->last_name;
 	}
 
+	if(empty($form_data->teste))
+	{
+		$error[] = 'Teste is Required';
+	}
+	else
+	{
+		$teste = $form_data->teste;
+	}
+
+
+
 	if(empty($error))
 	{
 		if($form_data->action == 'Insert')
@@ -67,11 +78,14 @@ else
 			$data = array(
 				':first_name'		=>	$first_name,
 				':last_name'		=>	$last_name
+				':teste'		=>	$teste,
+
 			);
 			$query = "
 			INSERT INTO tbl_sample 
-				(first_name, last_name) VALUES 
-				(:first_name, :last_name)
+				(first_name, last_name, teste) VALUES 
+				(:first_name, :last_name,:teste)
+
 			";
 			$statement = $connect->prepare($query);
 			if($statement->execute($data))
@@ -88,7 +102,7 @@ else
 			);
 			$query = "
 			UPDATE tbl_sample 
-			SET first_name = :first_name, last_name = :last_name 
+			SET first_name = :first_name, last_name = :last_name, teste = :teste 
 			WHERE id = :id
 			";
 

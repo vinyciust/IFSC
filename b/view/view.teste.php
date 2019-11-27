@@ -19,8 +19,8 @@ include 'menu.php';  ?>
 				<table datatable="ng" dt-options="vm.dtOptions" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th>First Name</th>
-							<th>Last Name</th>
+							<th>Nome</th>
+							<th>Valor</th>
 							<th>Ano</th>
 							<th>Edit</th>
 							<th>Delete</th>
@@ -31,8 +31,8 @@ include 'menu.php';  ?>
 							<td>{{name.Nome}}</td>
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
-							<td><button type="button" ng-click="fetchSingleData(name.id)" class="btn btn-warning btn-xs">Edit</button></td>
-							<td><button type="button" ng-click="deleteData(name.id)" class="btn btn-danger btn-xs">Delete</button></td>
+							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
+							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -56,11 +56,11 @@ include 'menu.php';  ?>
 						{{errorMessage}}
 					</div>
 					<div class="form-group">
-						<label>Enter First Name</label>
+						<label>Enter Nome</label>
 						<input type="text" name="Nome" ng-model="Nome" class="form-control" />
 					</div>
 					<div class="form-group">
-						<label>Enter Last Name</label>
+						<label>Enter Valor</label>
 						<input type="text" name="Valor" ng-model="Valor" class="form-control" />
 					</div>
 					<div class="form-group">
@@ -113,7 +113,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/insert.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano, 'action':$scope.submit_button, 'id':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -133,29 +133,29 @@ app.controller('crudController', function($scope, $http){
 		});
 	};
 
-	$scope.fetchSingleData = function(id){
+	$scope.fetchSingleData = function(idMoto){
 		$http({
 			method:"POST",
 			url:"../model/insert.php",
-			data:{'id':id, 'action':'fetch_single_data'}
+			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
 		}).success(function(data){
 			$scope.Nome = data.Nome;
 			$scope.Valor = data.Valor;
 			$scope.Ano = data.Ano;
-			$scope.hidden_id = id;
+			$scope.hidden_id = idMoto;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';
 			$scope.openModal();
 		});
 	};
 
-	$scope.deleteData = function(id){
+	$scope.deleteData = function(idMoto){
 		if(confirm("Are you sure you want to remove it?"))
 		{
 			$http({
 				method:"POST",
 				url:"../model/insert.php",
-				data:{'id':id, 'action':'Delete'}
+				data:{'idMoto':idMoto, 'action':'Delete'}
 			}).success(function(data){
 				$scope.success = true;
 				$scope.error = false;

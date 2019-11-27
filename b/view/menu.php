@@ -46,7 +46,27 @@
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <div class="dropdownReal">
-    <button class="dropbtnReal">Drop 
+    <button class="dropbtnReal">Motos 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdownReal-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <div class="dropdownReal">
+    <button class="dropbtnReal">Produtos 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdownReal-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <div class="dropdownReal">
+    <button class="dropbtnReal">Serviços 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdownReal-content">

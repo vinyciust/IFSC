@@ -1,11 +1,12 @@
 <?php
 
 //fetch_data.php
-
-require_once("../model/banco.php");
-$connect = new banco();
+ 
+//require_once("../model/banco.php");
+//$connect = new banco();
+$connect = new mysqli("localhost", "root", "","realmotos");
 $query = "SELECT * FROM tbl_sample ORDER BY id";
-$statement = $connect->prepare($query);
+$statement = $connect->query($query);
 if($statement->execute())
 {
 	while($row = $statement->fetch(PDO::FETCH_ASSOC))

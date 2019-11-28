@@ -74,7 +74,28 @@
 
 			}
 
-			
+			public function Drop(){
+					$Conn = new banco();
+					$Conn->conexao();
+
+					$sql = "SELECT * FROM moto";
+
+
+					if (mysqli_query ($Conn->conexao(), $sql)) {
+					     
+					      echo "New record created successfully";
+					      return "$sql";
+					} else {
+					      return $t= "Error: " . $sql . "<br>" . mysqli_error($Conn->conexao());
+
+					       /*"$sql";*/
+					}
+					mysqli_close($Conn->conexao());
+
+				}
+
+			}
+
 
 			
 

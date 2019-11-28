@@ -5,7 +5,7 @@ include 'menu.php';  ?>
 		
 		<div class="container" ng-init="fetchData()">
 			<br />
-				<h3 align="center">Tela de Cadastro de Motos</h3>
+				<h3 align="center">Tela de Cadastro de Serviços</h3>
 			<br />
 			<div class="alert alert-success alert-dismissible" ng-show="success" >
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -19,9 +19,7 @@ include 'menu.php';  ?>
 				<table datatable="ng" dt-options="vm.dtOptions" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th>Nome</th>
-							<th>Valor</th>
-							<th>Ano</th>
+							<th>Nome</th>							
 							<th>Descrição</th>
 							<th>Edit</th>
 							<th>Delete</th>
@@ -29,12 +27,10 @@ include 'menu.php';  ?>
 					</thead>
 					<tbody>
 						<tr ng-repeat="name in namesData">
-							<td>{{name.Nome}}</td>
-							<td>{{name.Valor}}</td>
-							<td>{{name.Ano}}</td>
+							<td>{{name.Nome}}</td>							
 							<td>{{name.Descricao}}</td>
-							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
-							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
+							<td><button type="button" ng-click="fetchSingleData(name.idServico)" class="btn btn-warning btn-xs">Edit</button></td>
+							<td><button type="button" ng-click="deleteData(name.idServico)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -60,15 +56,7 @@ include 'menu.php';  ?>
 					<div class="form-group">
 						<label>Enter Nome</label>
 						<input type="text" name="Nome" ng-model="Nome" class="form-control" />
-					</div>
-					<div class="form-group">
-						<label>Enter Valor</label>
-						<input type="text" name="Valor" ng-model="Valor" class="form-control" />
-					</div>
-					<div class="form-group">
-						<label>Enter Ano</label>
-						<input type="text" name="Ano" ng-model="Ano" class="form-control" />
-					</div>
+					</div>					
 					<div class="form-group">
 						<label>Enter Descrição</label>
 						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
@@ -94,7 +82,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.error = false;
 
 	$scope.fetchData = function(){
-		$http.get('../controller/motosController.php').success(function(data){
+		$http.get('../controller/servicosController.php').success(function(data){
 			$scope.namesData = data;
 		});
 	};
@@ -118,8 +106,8 @@ app.controller('crudController', function($scope, $http){
 	$scope.submitForm = function(){
 		$http({
 			method:"POST",
-			url:"../model/motosModel.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			url:"../model/servicosModel.php",
+			data:{'Nome':$scope.Nome, 'Descricao':$scope.Descricao, 'action':$scope.submit_button, 'idServico':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -139,30 +127,28 @@ app.controller('crudController', function($scope, $http){
 		});
 	};
 
-	$scope.fetchSingleData = function(idMoto){
+	$scope.fetchSingleData = function(idServico){
 		$http({
 			method:"POST",
-			url:"../model/motosModel.php",
-			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
+			url:"../model/servicosModel.php",
+			data:{'idServico':idServico, 'action':'fetch_single_data'}
 		}).success(function(data){
-			$scope.Nome = data.Nome;
-			$scope.Valor = data.Valor;
-			$scope.Ano = data.Ano;
+			$scope.Nome = data.Nome;			
 			$scope.Descricao = data.Descricao;
-			$scope.hidden_id = idMoto;
+			$scope.hidden_id = idServico;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';
 			$scope.openModal();
 		});
 	};
 
-	$scope.deleteData = function(idMoto){
+	$scope.deleteData = function(idServico){
 		if(confirm("Are you sure you want to remove it?"))
 		{
 			$http({
 				method:"POST",
-				url:"../model/motosModel.php",
-				data:{'idMoto':idMoto, 'action':'Delete'}
+				url:"../model/servicosModel.php",
+				data:{'idServico':idServico, 'action':'Delete'}
 			}).success(function(data){
 				$scope.success = true;
 				$scope.error = false;

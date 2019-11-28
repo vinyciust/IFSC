@@ -50,9 +50,12 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdownReal-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <?php require_once ("../controller/dropController.php");
+
+      $obj = new drop();
+      $obj->dropMoto();
+
+      ?>
     </div>
   </div> 
   <div class="dropdownReal">

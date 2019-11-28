@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>aaaa</title>
-</head>
-<body>
 
-	<?php 
+<?php 
+class drop{
+	
 
+	//CÃ³digo de conexÃ£o ao BD
+	function  dropMoto(){
 		require_once ("../model/banco.php");
 
 		
@@ -17,11 +15,13 @@
 		$result=$Conn->query($sql);
 
 					while($row = $result->fetch_assoc()) {
-        				 echo "<tr> ".$row["nome"]."</br>   				         
-        				   </tr>";}
+        				 echo "<a href='#'>".$row["nome"]."</a>";}
 
+        				 $result->close();
 
+//<a href="#">Link 1</a>
 
+}}
 	/*	$Conn = new banco();
 		$Conn->conexao();
 		$sql = "SELECT nome FROM moto";
@@ -36,6 +36,3 @@
 */
 
 	 ?>
-
-</body>
-</html>

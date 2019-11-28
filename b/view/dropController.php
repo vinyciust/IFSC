@@ -17,8 +17,7 @@
 		$result=$Conn->query($sql);
 
 					while($row = $result->fetch_assoc()) {
-        				 echo "<tr> ".$row["nome"]."</br>   				         
-        				   </tr>";}
+        				 echo "<a ".$row["nome"]."</a>";}
 
 
 

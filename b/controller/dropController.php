@@ -21,7 +21,45 @@ class drop{
 
 //<a href="#">Link 1</a>
 
-}}
+}
+
+function  dropProduto(){
+		require_once ("../model/banco.php");
+
+		
+		$Conn = new banco();
+		$Conn=$Conn->conexao();
+		$sql = "SELECT nome FROM produto";
+		//$Conn = new mysqli("localhost", "root", "","realmotos");				
+		$result=$Conn->query($sql);
+
+					while($row = $result->fetch_assoc()) {
+        				 echo "<a href='#'>".$row["nome"]."</a>";}
+
+        				 $result->close();
+
+//<a href="#">Link 1</a>
+
+}function  dropServico(){
+		require_once ("../model/banco.php");
+
+		
+		$Conn = new banco();
+		$Conn=$Conn->conexao();
+		$sql = "SELECT nome FROM servico";
+		//$Conn = new mysqli("localhost", "root", "","realmotos");				
+		$result=$Conn->query($sql);
+
+					while($row = $result->fetch_assoc()) {
+        				 echo "<a href='#'>".$row["nome"]."</a>";}
+
+        				 $result->close();
+
+//<a href="#">Link 1</a>
+
+}
+
+}
 	/*	$Conn = new banco();
 		$Conn->conexao();
 		$sql = "SELECT nome FROM moto";

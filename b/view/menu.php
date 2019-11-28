@@ -63,9 +63,12 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdownReal-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <?php require_once ("../controller/dropController.php");
+
+      $obj = new drop();
+      $obj->dropProduto();
+
+      ?>
     </div>
   </div> 
   <div class="dropdownReal">
@@ -73,9 +76,12 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdownReal-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <?php require_once ("../controller/dropController.php");
+
+      $obj = new drop();
+      $obj->dropServico();
+
+      ?>
     </div>
   </div> 
   <a href="#" id="login"><i class="fa fa-fw fa-user"></i> Login</a>

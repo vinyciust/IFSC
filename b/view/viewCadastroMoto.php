@@ -5,7 +5,7 @@ include 'menu.php';  ?>
 		
 		<div class="container" ng-init="fetchData()">
 			<br />
-				<h3 align="center">Tela de cadastro de Motos</h3>
+				<h3 align="center">Tela de Cadastro de Motos</h3>
 			<br />
 			<div class="alert alert-success alert-dismissible" ng-show="success" >
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

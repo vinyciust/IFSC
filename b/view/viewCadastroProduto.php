@@ -5,7 +5,7 @@ include 'menu.php';  ?>
 		
 		<div class="container" ng-init="fetchData()">
 			<br />
-				<h3 align="center">Tela de Cadastro de Motos</h3>
+				<h3 align="center">Tela de Cadastro de Produtos</h3>
 			<br />
 			<div class="alert alert-success alert-dismissible" ng-show="success" >
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -20,8 +20,7 @@ include 'menu.php';  ?>
 					<thead>
 						<tr>
 							<th>Nome</th>
-							<th>Valor</th>
-							<th>Ano</th>
+							<th>Valor</th>							
 							<th>Descrição</th>
 							<th>Edit</th>
 							<th>Delete</th>
@@ -30,11 +29,10 @@ include 'menu.php';  ?>
 					<tbody>
 						<tr ng-repeat="name in namesData">
 							<td>{{name.Nome}}</td>
-							<td>{{name.Valor}}</td>
-							<td>{{name.Ano}}</td>
+							<td>{{name.Valor}}</td>							
 							<td>{{name.Descricao}}</td>
-							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
-							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
+							<td><button type="button" ng-click="fetchSingleData(name.idProduto)" class="btn btn-warning btn-xs">Edit</button></td>
+							<td><button type="button" ng-click="deleteData(name.idProduto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -64,11 +62,7 @@ include 'menu.php';  ?>
 					<div class="form-group">
 						<label>Enter Valor</label>
 						<input type="text" name="Valor" ng-model="Valor" class="form-control" />
-					</div>
-					<div class="form-group">
-						<label>Enter Ano</label>
-						<input type="text" name="Ano" ng-model="Ano" class="form-control" />
-					</div>
+					</div>					
 					<div class="form-group">
 						<label>Enter Descrição</label>
 						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
@@ -94,7 +88,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.error = false;
 
 	$scope.fetchData = function(){
-		$http.get('../controller/motosController.php').success(function(data){
+		$http.get('../controller/ProdutosController.php').success(function(data){
 			$scope.namesData = data;
 		});
 	};
@@ -118,8 +112,8 @@ app.controller('crudController', function($scope, $http){
 	$scope.submitForm = function(){
 		$http({
 			method:"POST",
-			url:"../model/motosModel.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			url:"../model/produtosModel.php",
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Descricao':$scope.Descricao, 'action':$scope.submit_button, 'idProduto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -139,30 +133,29 @@ app.controller('crudController', function($scope, $http){
 		});
 	};
 
-	$scope.fetchSingleData = function(idMoto){
+	$scope.fetchSingleData = function(idProduto){
 		$http({
 			method:"POST",
-			url:"../model/motosModel.php",
-			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
+			url:"../model/produtosModel.php",
+			data:{'idProduto':idProduto, 'action':'fetch_single_data'}
 		}).success(function(data){
 			$scope.Nome = data.Nome;
 			$scope.Valor = data.Valor;
-			$scope.Ano = data.Ano;
 			$scope.Descricao = data.Descricao;
-			$scope.hidden_id = idMoto;
+			$scope.hidden_id = idProduto;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';
 			$scope.openModal();
 		});
 	};
 
-	$scope.deleteData = function(idMoto){
+	$scope.deleteData = function(idProduto){
 		if(confirm("Are you sure you want to remove it?"))
 		{
 			$http({
 				method:"POST",
-				url:"../model/motosModel.php",
-				data:{'idMoto':idMoto, 'action':'Delete'}
+				url:"../model/produtosModel.php",
+				data:{'idProduto':idProduto, 'action':'Delete'}
 			}).success(function(data){
 				$scope.success = true;
 				$scope.error = false;
@@ -199,7 +192,7 @@ app.controller('crudController', function($scope, $http){
 
 	<h3>Adicionando novo Registro</h3>
 
-	<form method="POST" action="../controller/motos_controller.php" name="form1">
+	<form method="POST" action="../controller/idProdutos_controller.php" name="form1">
 
 		Marca: 					<input type="text" name="marca"><br />
 		Valor:				    <input type="text" name="valor" ><br />

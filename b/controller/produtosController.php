@@ -5,7 +5,7 @@
 require_once("../model/banco.php");
 $connect = new banco();
 $connect = $connect->angular();
-$query = "SELECT * FROM moto ORDER BY idMoto";
+$query = "SELECT * FROM produto ORDER BY idProduto";
 $statement = $connect->query($query);
 
 if($statement->execute())

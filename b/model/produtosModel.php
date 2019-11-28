@@ -11,30 +11,28 @@ $form_data = json_decode(file_get_contents("php://input"));
 
 $error = '';
 $message = '';
-$validMotoation_error = '';
+$validProdutoation_error = '';
 $Nome = '';
 $Valor = '';
-$Ano = '';
 $Descricao = '';
 
 if($form_data->action == 'fetch_single_data')
 {
-	$query = "SELECT * FROM moto WHERE idMoto='".$form_data->idMoto."'";
+	$query = "SELECT * FROM produto WHERE idProduto='".$form_data->idProduto."'";
 	$statement = $connect->prepare($query);
 	$statement->execute();
 	$result = $statement->fetchAll();
 	foreach($result as $row)
 	{
 		$output['Nome'] = $row['Nome'];
-		$output['Valor'] = $row['Valor'];
-		$output['Ano'] = $row['Ano'];
+		$output['Valor'] = $row['Valor'];		
 		$output['Descricao'] = $row['Descricao'];
 	}
 }
 elseif($form_data->action == "Delete")
 {
 	$query = "
-	DELETE FROM moto WHERE idMoto='".$form_data->idMoto."'
+	DELETE FROM produto WHERE idProduto='".$form_data->idProduto."'
 	";
 	$statement = $connect->prepare($query);
 	if($statement->execute())
@@ -60,16 +58,7 @@ else
 	else
 	{
 		$Valor = $form_data->Valor;
-	}
-
-	if(empty($form_data->Ano))
-	{
-		$error[] = 'Descricao is Required';
-	}
-	else
-	{
-		$Ano = $form_data->Ano;
-	}
+	}	
 	if(empty($form_data->Descricao))
 	{
 		$error[] = 'Descricao is Required';
@@ -87,15 +76,14 @@ else
 		{
 			$data = array(
 				':Nome'		=>	$Nome,
-				':Valor'		=>	$Valor,
-				':Ano'		=>	$Ano,
+				':Valor'		=>	$Valor,				
 				':Descricao'		=>	$Descricao
 
 			);
 			$query = "
-			INSERT INTO moto 
-				(Nome, Valor, Ano, Descricao) VALUES 
-				(:Nome, :Valor,:Ano, :Descricao)
+			INSERT INTO produto 
+				(Nome, Valor, Descricao) VALUES 
+				(:Nome, :Valor, :Descricao)
 
 			";
 			$statement = $connect->prepare($query);
@@ -108,15 +96,14 @@ else
 		{
 			$data = array(
 				':Nome'	=>	$Nome,
-				':Valor'	=>	$Valor,
-				':Ano'			=>	$Ano,
+				':Valor'	=>	$Valor,				
 				':Descricao'	=>	$Descricao,
-				':idMoto'			=>	$form_data->idMoto
+				':idProduto'			=>	$form_data->idProduto
 			);
 			$query = "
-			UPDATE moto 
-			SET Nome = :Nome, Valor = :Valor, Ano = :Ano, Descricao = :Descricao
-			WHERE idMoto = :idMoto
+			UPDATE produto 
+			SET Nome = :Nome, Valor = :Valor, Descricao = :Descricao
+			WHERE idProduto = :idProduto
 			";
 
 			$statement = $connect->prepare($query);
@@ -128,11 +115,11 @@ else
 	} 
 	else
 	{
-		$validMotoation_error = implode(", ", $error);
+		$validProdutoation_error = implode(", ", $error);
 	}
 
 	$output = array(
-		'error'		=>	$validMotoation_error,
+		'error'		=>	$validProdutoation_error,
 		'message'	=>	$message
 	);
 

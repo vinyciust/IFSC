@@ -7,27 +7,33 @@
 
 	<?php 
 
-		require_once ("../controller/motos_controller.php");
+		require_once ("../model/banco.php");
 
-
-
-
-		//$Conn = new banco();
-				//	$Conn->conexao();
-					/*$sql = "SELECT nome FROM moto";
-					//$Conn=$Conn->conexao()->query($sql);	
-					$Conn = new mysqli("localhost", "root", "","realmotos");
-				
-					$result=$Conn->query($sql);
+		
+		$Conn = new banco();
+		$Conn=$Conn->conexao();
+		$sql = "SELECT nome FROM moto";
+		//$Conn = new mysqli("localhost", "root", "","realmotos");				
+		$result=$Conn->query($sql);
 
 					while($row = $result->fetch_assoc()) {
-        				 echo "<tr> ".$row["nome"]."</br>
-        				         
-        				                                         </tr>";}*/
-		 $controller;
-		$controller = new motoController();
-		$controller()->drop();
+        				 echo "<tr> ".$row["nome"]."</br>   				         
+        				   </tr>";}
 
+
+
+	/*	$Conn = new banco();
+		$Conn->conexao();
+		$sql = "SELECT nome FROM moto";
+		$Conn=$Conn->conexao()->query($sql);	
+		$Conn = new mysqli("localhost", "root", "","realmotos");				
+		$result=$Conn->query($sql);
+
+					while($row = $result->fetch_assoc()) {
+        				 echo "<tr> ".$row["nome"]."</br>   				         
+        				   </tr>";}
+		
+*/
 
 	 ?>
 

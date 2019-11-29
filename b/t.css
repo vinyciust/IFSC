@@ -1,7 +1,61 @@
-
 <style>
-a #btnReal {
 
-	color: white !important;
+
+
+.vip-gallery:hover .product-gallery-nav {
+    display: block
 }
+.no-js .vip-gallery:hover .product-gallery-nav {
+    display: none
+}
+
+.vip-gallery-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-height: 500px
+}
+.vip-gallery-container input[type=radio] {
+    display: none
+}
+.vip-gallery {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative
+}
+
+.product-gallery-nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 50;
+    cursor: pointer;
+    padding: 24px
+}
+.product-gallery-nav[data-direction=previous] {
+    left: 76px
+}
+.product-gallery-nav[data-direction=next] {
+    right: 24px;
+    padding-right: 0
+}
+.product-gallery-nav .ui-icon--chevron--left {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+.vip-gallery:hover .product-gallery-nav {
+    display: block
+}
+.no-js .vip-gallery:hover .product-gallery-nav {
+    display: none
+}
+.ie8 .product-gallery-nav {
+    top: 43%
+}
+
 </style>

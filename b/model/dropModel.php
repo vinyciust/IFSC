@@ -19,7 +19,8 @@ class dropModel{
 
 						 $nome = $row["nome"];
 
-        	 	echo "<a href='../controller/dropController.php' method='POST' name='nome'value=".$nome." type='hidden'>".$row["nome"]."</a>";}
+        	 	echo "
+        	 	<a href='../controller/dropProdutoController.php?nome=$nome'>".$row["nome"]."</a>";}
         				 
         				// echo "<a href=".$nome." onClick=".$controller->pagina("$nome").">".$nome."</a>";}
         				 	

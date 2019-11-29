@@ -23,11 +23,9 @@ class geraPaginaProdutoModel{
 
 					while($row = $result->fetch_assoc()) {
         				echo "<tr>
-        <td>".$row["nome"]."</td>
-        <td>".$row["idgrupo"]."</td>
-        <td>".$row["valorLido"]." </td>
-        <td>".$row["data"]."</td>
-        <td>".$row["hora"]."</td>
+        <td>".$row["Nome"]."</td>
+        <td>".$row["Descricao"]."</td> </br>
+        
         </tr>";
 
         				}

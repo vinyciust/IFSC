@@ -1,9 +1,18 @@
 <?php 
+
 class geraPaginaProduto{
 	
+	public $nome="";
 
-	//CÃ³digo de conexÃ£o ao BD
-	function  pagina($nome){
+	 public function setNome($nome) {  $this->nome= $nome;
+	 	
+
+  }	
+	
+
+}
+
+    function  pagina($nome){
 
 
 		require_once ("../model/banco.php");
@@ -11,7 +20,7 @@ class geraPaginaProduto{
 		
 		$Conn = new banco();
 		$Conn=$Conn->conexao();
-		$sql = "SELECT *FROM moto WHERE nome=".$nome."";
+		$sql = "SELECT *FROM moto WHERE nome='".$nome."'";
 		//$Conn = new mysqli("localhost", "root", "","realmotos");				
 		$result=$Conn->query($sql);
 
@@ -19,25 +28,11 @@ class geraPaginaProduto{
         				 echo "<p>".$row["nome"]."</p>"."<p>".$row["descricao"]."</p>";
 
 
-
-
         				}
 
         				 $result->close();
-
-
-
-
 	}
 
+	pagina("$nome");
 
-
-
-
-
-
-
-
-
-
-}
+?>

@@ -19,8 +19,8 @@ class drop{
 
 						 $nome = $row["nome"];
 
-        				 echo "<a href='#'>".$row["nome"]."</a>";}
-
+        				 echo "<a href='../controller/dropProdutoController.php' onclick=".$controller->setNome($nome).">".$row["nome"]."</a>";}
+        				 
         				// echo "<a href=".$nome." onClick=".$controller->pagina("$nome").">".$nome."</a>";}
         				 	
         				 $result->close();

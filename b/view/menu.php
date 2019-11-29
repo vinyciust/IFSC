@@ -90,11 +90,15 @@
 
 <form method="POST" action="" name="form1">
 
-    <<?php alert('Email enviado com Sucesso!'); ?>
+    <?php 
+
+$i=5;
+$i++;
+
+    echo ("Email enviado com Sucesso!$i"); ?>
 
     <input type="hidden" name="acao" value="incluir">
     
-    <input type="submit" value="Cadastrar">
   </form>
 
 </header>

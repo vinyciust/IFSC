@@ -31,8 +31,9 @@
     <script src="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/angular-datatables.min.js"></script>
     <link rel="stylesheet" href="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/datatables.bootstrap.css">
 
-   
-   
+ <!-- View Produto -->  
+    <link rel="stylesheet" href="https://http2.mlstatic.com/resources/frontend/web-vip/ui-dist/css/core__large-be626ca46c.css">
+    <link rel="stylesheet" href=t.css">
 
 </head>
 
@@ -43,7 +44,7 @@
 
 <nav class="MenuNavReal">
  <a id="logo"><i class="fa"><img src="https://scontent.fxap3-1.fna.fbcdn.net/v/t1.0-9/27973392_358211404681466_4613216062072862129_n.png?_nc_cat=104&_nc_ohc=ETe50krQSEUAQkQjJlwcikGWGZllToPbpHONt2TS6kNn6hgGVvTcmHkCA&_nc_ht=scontent.fxap3-1.fna&oh=b3913bcbd9e83c8d455decbdfab87ea8&oe=5E835125"/></i></a> <!-- Botar a logo via html e editar via css -->
-  <a href="#home">Home</a>
+  <a href="#home" id="btnReal">Home</a>
   <a href="#news">News</a>
   <div class="dropdownReal">
     <button class="dropbtnReal">Motos 

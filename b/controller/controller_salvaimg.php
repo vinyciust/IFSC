@@ -33,7 +33,7 @@
                     $diretorio = 'imagens/nome_da_moto/';
                     
 
-                    move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
+                    move_uploaded_file($_FILES[':arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
         //}
                     
                 }

@@ -75,7 +75,23 @@ include 'menu.php';  ?>
 					</div>
 					<div class="form-group">
 						<label>Enter Img1</label>
-						<input type="file" name="img1" ng-model="img1" class="form-control" />
+						<input type="file" name="arquivo0" ng-model="arquivo0"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img2</label>
+						<input type="file" name="arquivo1" ng-model="arquivo1"/>
+					</div>
+					<div class="form-group">
+						<label>Enter Img3</label>
+						<input type="file" name="arquivo2" ng-model="arquivo2"/>
+					</div>
+					<div class="form-group">
+						<label>Enter Img4</label>
+						<input type="file" name="arquivo3" ng-model="arquivo3" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img5</label>
+						<input type="file" name="arquivo4"ng-model="arquivo4" />
 					</div>
 	      		</div>
 	      		<div class="modal-footer">
@@ -123,7 +139,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/motosModel.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,'img1':$scope.img1, 'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,'arquivo0':$scope.arquivo0,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -153,7 +169,7 @@ app.controller('crudController', function($scope, $http){
 			$scope.Valor = data.Valor;
 			$scope.Ano = data.Ano;
 			$scope.Descricao = data.Descricao;
-			$scope.img1 = data.img1;
+			$scope.arquivo0 = data.arquivo0;
 			$scope.hidden_id = idMoto;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';

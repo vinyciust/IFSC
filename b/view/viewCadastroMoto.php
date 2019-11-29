@@ -73,6 +73,10 @@ include 'menu.php';  ?>
 						<label>Enter Descrição</label>
 						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
 					</div>
+					<div class="form-group">
+						<label>Enter Img1</label>
+						<input type="file" name="img1" ng-model="img1" class="form-control" />
+					</div>
 	      		</div>
 	      		<div class="modal-footer">
 	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />

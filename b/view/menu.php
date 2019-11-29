@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="https://realmotosserver.000webhostapp.com/htdocs/Angularjs/datatables.bootstrap.css">
 
  <!-- View Produto -->  
-    <link rel="stylesheet" href="https://http2.mlstatic.com/resources/frontend/web-vip/ui-dist/css/core__large-be626ca46c.css">
-    <link rel="stylesheet" href=t.css">
+    <!--<link rel="stylesheet" href="https://http2.mlstatic.com/resources/frontend/web-vip/ui-dist/css/core__large-be626ca46c.css">
+    <link rel="stylesheet" href=t.css">-->
 
 </head>
 

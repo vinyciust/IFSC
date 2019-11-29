@@ -21,13 +21,13 @@ class dropModel{
 
 						 $nome = $row["nome"];
 
-		 if(file_exists("../controller/dropProdutoController.php")) {
+		 if(file_exists("../controller/dropMotoController.php")) {
 
-			$axi="../controller/dropProdutoController.php?nome=$nome";
+			$axi="../controller/dropMotoController.php?nome=$nome";
 
 		} else {
 
-			$axi="./controller/dropProdutoController.php?nome=$nome";
+			$axi="./controller/dropMotoController.php?nome=$nome";
 
 		}
 

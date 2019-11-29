@@ -17,7 +17,7 @@ class geraPaginaProdutoModel{
 		
 		$Conn = new banco();
 		$Conn=$Conn->conexao();
-		$sql = "SELECT *FROM produto WHERE nome='".$nome."'";
+		$sql = "SELECT *FROM moto WHERE nome='".$nome."'";
 		//$Conn = new mysqli("localhost", "root", "","realmotos");				
 		$result=$Conn->query($sql);
 

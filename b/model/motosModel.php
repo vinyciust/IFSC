@@ -78,6 +78,14 @@ else
 	{
 		$Descricao = $form_data->Descricao;
 	}
+	if(empty($form_data->img1))
+	{
+		$error[] = 'img1 is Required';
+	}
+	else
+	{
+		$Descricao = $form_data->Descricao;
+	}
 
 
 

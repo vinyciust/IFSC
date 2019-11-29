@@ -51,7 +51,16 @@
     </button>
     <div class="dropdownReal-content">
       <?php 
+      if(file_exists("../controller/dropController.php")) {
+
       require_once ("../controller/dropController.php");
+
+    } else {
+
+      require_once ("./controller/dropController.php");
+
+    }
+     
       $obj = new drop();
       $obj->dropMoto();
 
@@ -63,7 +72,15 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdownReal-content">
-      <?php require_once ("../controller/dropController.php");
+      <?php if(file_exists("../controller/dropController.php")) {
+
+      require_once ("../controller/dropController.php");
+
+    } else {
+
+      require_once ("./controller/dropController.php");
+
+    }
 
       $obj = new drop();
       $obj->dropProduto();
@@ -76,7 +93,15 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdownReal-content">
-      <?php require_once ("../controller/dropController.php");
+      <?php if(file_exists("../controller/dropController.php")) {
+
+      require_once ("../controller/dropController.php");
+
+    } else {
+
+      require_once ("./controller/dropController.php");
+
+    }
 
       $obj = new drop();
       $obj->dropServico();

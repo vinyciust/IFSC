@@ -15,12 +15,24 @@ class dropModel{
 		//$Conn = new mysqli("localhost", "root", "","realmotos");				
 		$result=$Conn->query($sql);
 
+		$axi='';
+		
 					while($row = $result->fetch_assoc()) {
 
 						 $nome = $row["nome"];
 
+		 if(file_exists("../controller/dropProdutoController.php")) {
+
+			$axi="../controller/dropProdutoController.php?nome=$nome";
+
+		} else {
+
+			$axi="./controller/dropProdutoController.php?nome=$nome";
+
+		}
+
         	 	echo "
-        	 	<a href='../controller/dropProdutoController.php?nome=$nome'>".$row["nome"]."</a>";}
+        	 	<a href=".$axi.">".$row["nome"]."</a>";}
         				 
         				// echo "<a href=".$nome." onClick=".$controller->pagina("$nome").">".$nome."</a>";}
         				 	

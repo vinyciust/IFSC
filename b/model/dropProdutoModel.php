@@ -21,7 +21,18 @@ class geraPaginaProdutoModel{
 		//$Conn = new mysqli("localhost", "root", "","realmotos");				
 		$result=$Conn->query($sql);
 
-					while($row = $result->fetch_assoc()) {
+		$i=0;
+		
+			while($row = $result->fetch_assoc()) {
+			if ($i==0){
+				if(file_exists("../view/menu.php")) {
+
+        	include '../view/menu.php';  		
+        	}else{
+        	include './view/menu.php'; 
+        }		$i++;
+			}
+				
         				echo "<tr>
         <td>".$row["Nome"]."</td>
         <td>".$row["Descricao"]."</td> </br>

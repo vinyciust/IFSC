@@ -11,7 +11,7 @@ require_once ("../model/dropProdutoModel.php");
   
 	$Controller = new geraPaginaProdutoModel(); 
   	$Controller->setNome($nome); 
-  	echo "$nome";
+  
    }
 
 function getNome() { 
@@ -46,7 +46,7 @@ require_once ("../model/dropProdutoModel.php");
 	}
 
 
-echo $nome=$_GET['nome'];
+$nome=$_GET['nome'];
 $Controller = new geraPaginaProduto();  
 $Controller->pagina($nome);
 

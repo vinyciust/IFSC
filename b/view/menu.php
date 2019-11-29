@@ -88,6 +88,13 @@
 
 </nav>
 
+<form method="POST" action="" name="form1">
 
+    <<?php alert('Email enviado com Sucesso!'); ?>
+
+    <input type="hidden" name="acao" value="incluir">
+    
+    <input type="submit" value="Cadastrar">
+  </form>
 
 </header>

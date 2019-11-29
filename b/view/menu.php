@@ -49,9 +49,9 @@
     <button class="dropbtnReal">Motos 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdownReal-content">
-      <?php require_once ("../controller/dropController.php");
-
+    
+      <?php 
+      require_once ("../controller/dropController.php");
       $obj = new drop();
       $obj->dropMoto();
 
@@ -88,17 +88,6 @@
 
 </nav>
 
-<form method="POST" action="" name="form1">
 
-    <?php 
-
-$i=5;
-$i++;
-
-    echo ("Email enviado com Sucesso!$i"); ?>
-
-    <input type="hidden" name="acao" value="incluir">
-    
-  </form>
 
 </header>

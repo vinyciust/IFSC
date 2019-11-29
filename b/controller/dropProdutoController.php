@@ -46,8 +46,8 @@ require_once ("../model/dropProdutoModel.php");
 	}
 
 
-
+$nome = $_POST['nome'];
 $Controller = new geraPaginaProduto();  
-$Controller->pagina($Controller->getNome());
+$Controller->pagina($nome);
 
 ?>

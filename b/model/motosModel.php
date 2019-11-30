@@ -16,7 +16,6 @@ $Nome = '';
 $Valor = '';
 $Ano = '';
 $Descricao = '';
-$arquivo = $form_data->arquivo0;
 
 if($form_data->action == 'fetch_single_data')
 {
@@ -143,38 +142,7 @@ else
 
  
             
-            //$msg = false;
-            
-
-              if(is_dir('../Controller/imagens/nome_da_moto/'))
-                {
-                    echo 'A Pasta Existe';
-                }
-                else{
-                        echo 'A Pasta não Existe';
-                        mkdir(__DIR__."../Controller/imagens/nome_da_moto/", 0777, true);
-                    }
-
-                for ($i=0; $i <1 ; $i++) { 
-                    # code...
-                //if (isset($_FILES['arquivo'.$i])) {
-
-                    
-                   
-                    $extensao ='.png';  
-                    $novo_nome = 'img' .$i.$extensao;
-                       
-                    
-                    $diretorio = '../Controller/imagens/nome_da_moto/';
-                    
-
-                    move_uploaded_file($_FILES["".$arquivo."$i"]['tmp_name'], $diretorio.$novo_nome);
-        //}
-                    
-                
-
-            
-        }
+           
 }
 
 

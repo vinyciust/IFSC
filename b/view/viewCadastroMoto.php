@@ -88,7 +88,52 @@ include 'menu.php';  ?>
 </div>
 
 
+<div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+    		<form action="viewCadastroMoto.php" method="POST" enctype="multipart/form-data">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">{{modalTitle}}</h4>
+	      		</div>
+	      		<div class="modal-body">
+	      			<div class="alert alert-danger alert-dismissible" ng-show="error" >
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						{{errorMessage}}
+					</div>
+					<div class="form-group">
+						<label>Img</label>
+						<input type="file" name="arquivo0" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo1"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo2"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo3" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo4"  />
+					</div>
 
+					
+	      		</div>
+	      		<div class="modal-footer">
+	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
+	      			<input type="submit" name="submit" id="submit" class="btn btn-info" value="{{submit_button}}" />
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        	</div>
+	        </form>
+    	</div>
+  	</div>
+</div>
+	
 
 <script>
 
@@ -112,6 +157,16 @@ app.controller('crudController', function($scope, $http){
 
 	$scope.closeModal = function(){
 		var modal_popup = angular.element('#crudmodal');
+		modal_popup.modal('hide');
+	};
+
+	$scope.openModalImg = function(){
+		var modal_popup = angular.element('#crudmodalImg');
+		modal_popup.modal('show');
+	};
+
+	$scope.closeModalImg = function(){
+		var modal_popup = angular.element('#crudmodalImg');
 		modal_popup.modal('hide');
 	};
 
@@ -150,15 +205,10 @@ $scope.img = function(idMoto){
 			method:"POST",
 			url:"../model/motosModel.php",
 			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
-		}).success(function(data){
-			$scope.Nome = data.Nome;
-			$scope.Valor = data.Valor;
-			$scope.Ano = data.Ano;
-			$scope.Descricao = data.Descricao;
-			$scope.hidden_id = idMoto;
-			$scope.modalTitle = 'Edit Data';
-			$scope.submit_button = 'Edit';
-			$scope.openModal();
+		}).success(function(data){			
+			$scope.modalTitle = 'Salva Imagem';
+			$scope.submit_button = 'Salvar';
+			$scope.openModalImg();
 		});
 	};
 	$scope.fetchSingleData = function(idMoto){
@@ -200,6 +250,12 @@ $scope.img = function(idMoto){
 
 
 
+<?php require_once("../controller/controller_salvaimg.php"); 
+
+$obj1 = new SalvaImagem();
+        $obj1->imagens();
+
+        ?>
 
 
 

@@ -119,7 +119,6 @@ app.controller('crudController', function($scope, $http){
 		});
 	};
 
-
 	$scope.openModal = function(){
 		var modal_popup = angular.element('#crudmodal');
 		modal_popup.modal('show');

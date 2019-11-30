@@ -137,7 +137,7 @@
 .lSSlideOuter .lSPager.lSGallery img {
     display: block;
     height: auto;
-    max-width: 100%;
+    width: 50%;
 }
 .lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
     content: " ";
@@ -150,7 +150,7 @@
 
 /* slider actions */
 .lSAction > a {
-    width: 32px;
+    width: 6.7%;
     display: block;
     top: 50%;
     height: 32px;

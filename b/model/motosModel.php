@@ -16,7 +16,7 @@ $Nome = '';
 $Valor = '';
 $Ano = '';
 $Descricao = '';
-$arquivo = $_POST['arquivo0'];
+$arquivo = $form_data->arquivo0;
 
 if($form_data->action == 'fetch_single_data')
 {

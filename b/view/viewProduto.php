@@ -97,15 +97,21 @@ include 'menu.php';
 <section id="aside">
 
 <article id="dados">
-<h1>Nome do Produto:</h1>
-<p>Valor:</p>
-<p>Isso Awe</p>
-<p>TESTE</p>
+<h1>Nome do Produto: Honda Cg 150 Titan EX</h1>
+<h3><p>Valor: R$7.900,00</p>
+<p></p>
+<p>Descrição:Partida Elétrica Publicação automática através do sistema Altimus. Ano
+2013/2014.</br> Cor:
+Azul</p></h3>
 </article>
 
 <article id="botaoCompra">
 
-<a href="IFSC\b\index.php">Comprar</a>
+
+
+<button type="button" class="btn btn-light">   Comprar   </button>
+
+
 
 </article>
 

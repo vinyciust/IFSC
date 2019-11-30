@@ -4,21 +4,21 @@ class SalvaImagem {
       
 
 
- public function cmd($nomeMoto){
+ public function cmd($nome){
    
            error_reporting(0);
            // include("conexaoTeste.php");
             
             //$msg = false;
             
-            if($nomeMoto !=null){
-              if(is_dir('../controller/imagens/$nomeMoto'))
+            if($nome !=null){
+              if(is_dir('../controller/imagens/$nome'))
                 {
                    
                 }
                 else{
                         
-                        mkdir("../controller/imagens/$nomeMoto", 0777, true);
+                        mkdir("../controller/imagens/$nome", 0777, true);
                     }
 
                 for ($i=0; $i <5 ; $i++) { 
@@ -31,7 +31,7 @@ class SalvaImagem {
                     $novo_nome = 'img' .$i.$extensao;
                        
                     
-                    $diretorio = "../controller/imagens/$nomeMoto/";
+                    $diretorio = "../controller/imagens/$nome/";
                     
 
                     move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);

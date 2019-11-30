@@ -43,7 +43,7 @@ $obj2->cmd($nomeMoto);
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
 							<td>{{name.Descricao}}</td>
-							<td><button type="button" ng-click="img(name.idMoto)" class="btn btn-warning btn-xs">Imagem</button></td>
+							<td><button type="button" ng-click="img(name.idMoto)" class="btn btn-success btn-xs">Imagem</button></td>
 							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>

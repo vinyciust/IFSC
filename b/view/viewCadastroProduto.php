@@ -1,5 +1,15 @@
 <?php 
-include 'menu.php';  ?>
+include 'menu.php'; 
+$nomeProduto=""; 
+ 
+ require_once("../controller/controller_salvaimg.php");
+ $obj2 = new SalvaImagem(); 
+error_reporting(0);
+ $nomeMoto=$_POST['nomeProduto'];
+$obj2->cmd($nomeProduto);
+ ?>
+
+ ?>
 
  <body ng-app="crudApp" ng-controller="crudController">
 		
@@ -22,6 +32,7 @@ include 'menu.php';  ?>
 							<th>Nome</th>
 							<th>Valor</th>							
 							<th>Descrição</th>
+							<th>Imagens</th>
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>
@@ -31,6 +42,7 @@ include 'menu.php';  ?>
 							<td>{{name.Nome}}</td>
 							<td>{{name.Valor}}</td>							
 							<td>{{name.Descricao}}</td>
+							<td><button type="button" ng-click="img(name.idProduto)" class="btn btn-success btn-xs">Imagem</button></td>
 							<td><button type="button" ng-click="fetchSingleData(name.idProduto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idProduto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -78,6 +90,61 @@ include 'menu.php';  ?>
   	</div>
 </div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+    		<form action="viewCadastroMoto.php" method="POST" enctype="multipart/form-data">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">{{modalTitle}}</h4>
+	      		</div>
+	      		<div class="modal-body">
+	      			<div class="alert alert-danger alert-dismissible" ng-show="error" >
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						{{errorMessage}}
+					</div>
+					<div class="form-group">
+						<label>Enter nome da moto</label>
+						<input type="text" name="nomeMoto" id="nomeProduto" ng-model="nomeProduto" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo0"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo1"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo2"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo3" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo4"  />
+					</div>
+
+
+				
+				
+				
+
+	      		</div>
+	      		<div class="modal-footer">
+	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
+	      			<input type="submit" name="submit" id="submit" class="btn btn-info" value="{{submit_button}}" />
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        	</div>
+	        </form>
+    	</div>
+  	</div>
+</div>
+
+
 <script>
 
 var app = angular.module('crudApp', ['datatables']);
@@ -100,6 +167,16 @@ app.controller('crudController', function($scope, $http){
 
 	$scope.closeModal = function(){
 		var modal_popup = angular.element('#crudmodal');
+		modal_popup.modal('hide');
+	};
+
+	$scope.openModalImg = function(){
+		var modal_popup = angular.element('#crudmodalImg');
+		modal_popup.modal('show');
+	};
+
+	$scope.closeModalImg = function(){
+		var modal_popup = angular.element('#crudmodalImg');
 		modal_popup.modal('hide');
 	};
 
@@ -132,6 +209,21 @@ app.controller('crudController', function($scope, $http){
 			}
 		});
 	};
+
+	$scope.img = function(idProduto){
+		$http({
+			method:"POST",
+			url:"../model/produtosModel.php",
+			data:{'idProduto':idProduto, 'action':'fetch_single_data'}
+		}).success(function(data){	
+			$scope.nomeProduto = data.Nome;				
+			$scope.modalTitle = 'Salva Imagem';
+			$scope.submit_button = 'Salvar';
+			$scope.openModalImg();
+
+		});
+		
+	};		
 
 	$scope.fetchSingleData = function(idProduto){
 		$http({

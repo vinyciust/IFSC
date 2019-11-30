@@ -10,65 +10,73 @@ include 'menu.php';
       
         <!--carrossel-->
 
-<div id="demo" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/img1.jpg" alt="Los Angeles">
-      <div class="carousel-caption">
-        <h3>CB 650 F -2016</h3>
-        <p>💰30.900,00!</p>
-      </div>   
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div id="carousel-main" class="carousel slide " data-ride="carousel" data-interval="5000">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img src="img/img1.jpg" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="img/img2.jpg" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="img/img3.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+
+                <!-- Controls -->
+                <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="carousel-pager" class="carousel slide " data-ride="carousel" data-interval="1000">
+                <!-- Carousel items -->
+                <div class="carousel-inner vertical">
+                    <div class="active item">
+                        <img src="img/img1.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="0">
+                    </div>
+                    <div class="item">
+                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
+                    </div>
+                    <div class="item">
+                        <img src="img/img3.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="2">
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-pager" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-pager" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="img/img2.jpg" alt="Chicago">
-      <div class="carousel-caption">
-        <h3>CBROS 150</h3>
-        <p>💰6.200,00!</p>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="img/img3.jpg" alt="New York">
-      <div class="carousel-caption">
-        <h3>Fan 150</h3>
-        <p>💰5.500,00!</p>
-      </div>   
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
 </div>
 
-<section id="aside_carrousel">
-  
-    <article>
-      <h3>Nome da Moto: </h3>
-      <h3>Valor:</h3>
-      <h3>Descrição</h3>
-
-    </article>
-
-
-    <article>
-        
-      <a href="index.php">COMPRAR</a> 
-
-
-    </article>
-
- </section>
 </section>
-
-
-
 
 </section>
 <?php

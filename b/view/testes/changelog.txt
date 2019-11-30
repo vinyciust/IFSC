@@ -1,0 +1,19 @@
+/*
+* Project	:	Single Responsive Photo Gallery plus Slideshow
+* Author	:	Phong Thai (http://www.javascriptbank.com/)
+* Support	:	http://www.javascriptbank.com/single-responsive-photo-gallery-plus-slideshow.html
+* Version	:	1.0.1
+*/
+
+/*
+	You are free to use this plugin in any personal, commercial project without my permission.
+	But please help me by leaving the Copyright sign, it just occupies about 10 pixels, 
+	otherwise please help me with a milk coffee (https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2MEPB69L9E5VQ) to remove this sign.
+*/
+
+###v1.0.1 - 26/06/2013
+ - increase srpgs_slideshowSpeed to prevent abruptly image showing for online demo
+ - rearrange some codes for better performance
+
+###v1 - 20/06/2013
+ - First release

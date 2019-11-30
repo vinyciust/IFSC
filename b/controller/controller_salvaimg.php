@@ -1,84 +1,32 @@
- <?php
-    
+<?php 
+require_once("../model/upImageModel.php");
+
+$controller = new SalvaImagemModel();
+
     class SalvaImagem {
     
         //require_once("../model/motos_model.php");
+        public function setNome($nome_da_moto){
 
-        public function imagens($nome_da_moto){
-             
-            include("conexaoTeste.php");
-            
-            //$msg = false;
-            
+            $controller()->setNome($nome_da_moto);
 
-             /* if(is_dir('imagens/nome_da_moto/'))
-                {
-                    echo 'A Pasta Existe';
-                }
-                else{
-                        echo 'A Pasta não Existe';
-                        mkdir(__DIR__."/imagens/nome_da_moto/", 0777, true);
-                    }*/
 
-                for ($i=0; $i <5 ; $i++) { 
-                    # code...
-                if (isset($_FILES['arquivo'.$i])) {
-
-                    
-                   
-                    $extensao ='.png';  
-                    $novo_nome = 'img' .$i.$extensao;
-                       
-                    
-                    $diretorio = '../controller/imagens/nome_da_moto/';
-                    
-
-                    move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
         }
-                    
-                }
 
-            
+        public function getNome(){
+
+          return  $controller()->getNome();
+
+
         }
-    }
-    
-    
-?>
 
 
 
 
+}
+
+$controller->imagens($controller->getNome());
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ ?>

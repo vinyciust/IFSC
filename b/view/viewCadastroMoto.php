@@ -104,6 +104,9 @@ include 'menu.php';  ?>
   	</div>
 </div>
 
+
+
+
 <script>
 
 var app = angular.module('crudApp', ['datatables']);
@@ -139,7 +142,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/motosModel.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,'arquivo0':$scope.arquivo0,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,"arquivo0":$scope.arquivo0,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -196,7 +199,6 @@ app.controller('crudController', function($scope, $http){
 });
 
 </script>
-
 
 
 

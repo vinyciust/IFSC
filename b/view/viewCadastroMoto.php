@@ -23,6 +23,7 @@ include 'menu.php';  ?>
 							<th>Valor</th>
 							<th>Ano</th>
 							<th>Descrição</th>
+							<th>Imagens</th>
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>
@@ -33,6 +34,7 @@ include 'menu.php';  ?>
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
 							<td>{{name.Descricao}}</td>
+							<td><button type="button" ng-click="img(name.idMoto)" class="btn btn-warning btn-xs">Imagem</button></td>
 							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -123,7 +125,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/motosModel.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,"arquivo0":$scope.arquivo0,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -143,6 +145,22 @@ app.controller('crudController', function($scope, $http){
 		});
 	};
 
+$scope.img = function(idMoto){
+		$http({
+			method:"POST",
+			url:"../model/motosModel.php",
+			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
+		}).success(function(data){
+			$scope.Nome = data.Nome;
+			$scope.Valor = data.Valor;
+			$scope.Ano = data.Ano;
+			$scope.Descricao = data.Descricao;
+			$scope.hidden_id = idMoto;
+			$scope.modalTitle = 'Edit Data';
+			$scope.submit_button = 'Edit';
+			$scope.openModal();
+		});
+	};
 	$scope.fetchSingleData = function(idMoto){
 		$http({
 			method:"POST",
@@ -153,7 +171,6 @@ app.controller('crudController', function($scope, $http){
 			$scope.Valor = data.Valor;
 			$scope.Ano = data.Ano;
 			$scope.Descricao = data.Descricao;
-			$scope.arquivo0 = data.arquivo0;
 			$scope.hidden_id = idMoto;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';

@@ -4,15 +4,21 @@ include 'menu.php';
 
 ?>
 
-<section >
+<section id="geral">
+<section id="Produto">
 
     
       
         <!--carrossel-->
 
+		
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+
+	
+
+		
 
 		
 
@@ -35,6 +41,15 @@ include 'menu.php';
                     </div>
                     <div class="item">
                         <img src="img/img3.jpg" class="img-responsive">
+                    </div>
+					<div class="item">
+                        <img src="img/img2.jpg" class="img-responsive">
+                    </div>
+					<div class="item">
+                        <img src="img/img2.jpg" class="img-responsive">
+                    </div>
+					<div class="item">
+                        <img src="img/img2.jpg" class="img-responsive">
                     </div>
                 </div>
 
@@ -64,6 +79,15 @@ include 'menu.php';
                     <div class="item">
                         <img src="img/img3.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="2">
                     </div>
+					<div class="item">
+                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
+                    </div>
+					<div class="item">
+                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
+                    </div>
+					<div class="item">
+                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
+                    </div>
                 </div>
                 
                 <!-- Controls -->
@@ -87,7 +111,15 @@ include 'menu.php';
 </section>
 
 
+<section id="aside">
+Nome do Produto:
+Valor:
+Isso Awe
+TESTE
+</section>
 
+
+</section>
 
 <?php
 
@@ -101,6 +133,7 @@ include 'menu.php';
 
 
 ?>
+
 
 
 

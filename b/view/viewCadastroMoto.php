@@ -1,6 +1,9 @@
 <?php 
 include 'menu.php'; 
-$nomeMoto=''; ?>
+$nomeMoto=""; 
+ require_once("../controller/controller_salvaimg.php");
+ $obj1 = new SalvaImagem(); ?>
+
 
  <body ng-app="crudApp" ng-controller="crudController">
 		
@@ -35,7 +38,7 @@ $nomeMoto=''; ?>
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
 							<td>{{name.Descricao}}</td>
-							<td><button type="button" ng-click="img(name.idMoto)" ng-click="$nomeMoto=name.idMoto" class="btn btn-warning btn-xs">Imagem</button></td>
+							<td><button type="button" ng-click="img(name.idMoto)" class="btn btn-warning btn-xs">Imagem</button></td>
 							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -92,7 +95,7 @@ $nomeMoto=''; ?>
 <div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
 	<div class="modal-dialog" role="document">
     	<div class="modal-content">
-    		<form action="viewCadastroMoto.php" method="POST" enctype="multipart/form-data">
+    		<form action="viewCadastroMoto.php?" method="POST" enctype="multipart/form-data">
 	      		<div class="modal-header">
 	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        		<h4 class="modal-title">{{modalTitle}}</h4>
@@ -104,7 +107,7 @@ $nomeMoto=''; ?>
 					</div>
 					<div class="form-group">
 						<label>Enter Img</label>
-						<input type="file" name="arquivo0" />
+						<input type="file" name="arquivo0"  />
 					</div>
 					<div class="form-group">
 						<label>Enter Img</label>
@@ -122,8 +125,10 @@ $nomeMoto=''; ?>
 						<label>Enter Img</label>
 						<input type="file" name="arquivo4"  />
 					</div>
+				
+				
+				
 
-					
 	      		</div>
 	      		<div class="modal-footer">
 	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
@@ -159,6 +164,7 @@ app.controller('crudController', function($scope, $http){
 	$scope.closeModal = function(){
 		var modal_popup = angular.element('#crudmodal');
 		modal_popup.modal('hide');
+
 	};
 
 	$scope.openModalImg = function(){
@@ -206,12 +212,15 @@ $scope.img = function(idMoto){
 			method:"POST",
 			url:"../model/motosModel.php",
 			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
-		}).success(function(data){			
+		}).success(function(data){	
+			$nomeMoto = data.Nome;				
 			$scope.modalTitle = 'Salva Imagem';
 			$scope.submit_button = 'Salvar';
 			$scope.openModalImg();
+		<?php $obj1->set($nomeMoto);?>
 		});
-	};
+		
+	};			
 	$scope.fetchSingleData = function(idMoto){
 		$http({
 			method:"POST",
@@ -250,13 +259,7 @@ $scope.img = function(idMoto){
 </script>
 
 
-
-<?php require_once("../controller/controller_salvaimg.php"); 
-echo "$nomeMoto";
-$obj1 = new SalvaImagem();
-        $obj1->imagens($nomeMoto);
-
-  ?>
+<?php $obj1->imagens(); ?>
 
 
 

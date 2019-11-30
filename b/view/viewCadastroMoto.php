@@ -3,7 +3,11 @@ include 'menu.php';
 $nomeMoto=""; 
  require_once("../model/upImageModel.php");
   require_once("../controller/controller_salvaimg.php");
- $obj2 = new SalvaImagem(); ?>
+ $obj2 = new SalvaImagem(); 
+error_reporting(0);
+ $nomeMoto=$_POST['nomeMoto'];
+$obj2->cmd($nomeMoto);
+ ?>
 
 
  <body ng-app="crudApp" ng-controller="crudController">
@@ -96,7 +100,7 @@ $nomeMoto="";
 <div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
 	<div class="modal-dialog" role="document">
     	<div class="modal-content">
-    		<form action="viewCadastroMoto.php" method="get" enctype="multipart/form-data">
+    		<form action="viewCadastroMoto.php" method="POST" enctype="multipart/form-data">
 	      		<div class="modal-header">
 	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        		<h4 class="modal-title">{{modalTitle}}</h4>
@@ -108,7 +112,7 @@ $nomeMoto="";
 					</div>
 					<div class="form-group">
 						<label>Enter nome da moto</label>
-						<input type="text" name="nomeMoto" ng-model="nomeMoto" class="form-control" />
+						<input type="text" name="nomeMoto" id="nomeMoto" ng-model="nomeMoto" class="form-control" />
 					</div>
 					<div class="form-group">
 						<label>Enter Img</label>
@@ -266,7 +270,7 @@ $scope.img = function(idMoto){
 </script>
 
 
-<?php $obj2->cmd()  ?> 
+
 
 
 

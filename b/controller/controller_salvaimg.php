@@ -20,21 +20,56 @@ class SalvaImagem {
 
         }
 
- public function cmd($nome){
-   require_once("../model/upImageModel.php");
+
+ public function cmd($nomeMoto){
    
-        $controller = new SalvaImagemModel();
-        $controller->imagens($nome);
+           error_reporting(0);
+           // include("conexaoTeste.php");
+            
+            //$msg = false;
+            
+            if($nomeMoto !=null){
+              if(is_dir('../controller/imagens/$nomeMoto'))
+                {
+                   
+                }
+                else{
+                        
+                        mkdir("../controller/imagens/$nomeMoto", 0777, true);
+                    }
+
+                for ($i=0; $i <5 ; $i++) { 
+                    # code...
+                if (isset($_FILES['arquivo'.$i])) {
+
+                    
+                   
+                    $extensao ='.png';  
+                    $novo_nome = 'img' .$i.$extensao;
+                       
+                    
+                    $diretorio = "../controller/imagens/$nomeMoto/";
+                    
+
+                    move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
+        }
+                    
+                
+    }
 
 }
 
 
 }
 
+}
 
 
-$nome=$_GET['nomeMoto'];
-$Controller = new SalvaImagem();  
-$Controller->cmd($nome);
+
+//$nomeMoto=$_GET['nomeMoto'];
+
+
+//$Controller = new SalvaImagem();  
+//$Controller->cmd($nomeMoto);
 
  ?>

@@ -22,14 +22,14 @@
             
             //$msg = false;
             
-
-              if(is_dir('../controller/imagens/$nomeMoto/'))
+            if($nomeMoto !=null){
+              if(is_dir('../controller/imagens/$nomeMoto'))
                 {
                     echo 'A Pasta Existe';
                 }
                 else{
                         echo 'A Pasta não Existe';
-                        mkdir(__DIR__."../controller/imagens/$nomeMoto/", 0777, true);
+                        mkdir("../controller/imagens/$nomeMoto", 0777, true);
                     }
 
                 for ($i=0; $i <5 ; $i++) { 
@@ -42,14 +42,14 @@
                     $novo_nome = 'img' .$i.$extensao;
                        
                     
-                    $diretorio = '../controller/imagens/$nomeMoto/';
+                    $diretorio = '../controller/imagens/$nomeMoto';
                     
 
                     move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
         }
                     
                 }
-
+}
             
         }
     }

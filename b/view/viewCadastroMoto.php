@@ -1,5 +1,6 @@
 <?php 
-include 'menu.php';  ?>
+include 'menu.php'; 
+$nomeMoto=''; ?>
 
  <body ng-app="crudApp" ng-controller="crudController">
 		
@@ -34,7 +35,7 @@ include 'menu.php';  ?>
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
 							<td>{{name.Descricao}}</td>
-							<td><button type="button" ng-click="img(name.idMoto)" class="btn btn-warning btn-xs">Imagem</button></td>
+							<td><button type="button" ng-click="img(name.idMoto)" ng-click="$nomeMoto=name.idMoto" class="btn btn-warning btn-xs">Imagem</button></td>
 							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -102,7 +103,7 @@ include 'menu.php';  ?>
 						{{errorMessage}}
 					</div>
 					<div class="form-group">
-						<label>Img</label>
+						<label>Enter Img</label>
 						<input type="file" name="arquivo0" />
 					</div>
 					<div class="form-group">
@@ -251,11 +252,11 @@ $scope.img = function(idMoto){
 
 
 <?php require_once("../controller/controller_salvaimg.php"); 
-
+echo "$nomeMoto";
 $obj1 = new SalvaImagem();
-        $obj1->imagens();
+        $obj1->imagens($nomeMoto);
 
-        ?>
+  ?>
 
 
 

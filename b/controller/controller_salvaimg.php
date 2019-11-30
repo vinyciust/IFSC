@@ -4,7 +4,7 @@
     
         //require_once("../model/motos_model.php");
 
-        public function imagens(){
+        public function imagens($nome_da_moto){
              
             include("conexaoTeste.php");
             
@@ -22,7 +22,7 @@
 
                 for ($i=0; $i <5 ; $i++) { 
                     # code...
-                //if (isset($_FILES['arquivo'.$i])) {
+                if (isset($_FILES['arquivo'.$i])) {
 
                     
                    
@@ -30,11 +30,11 @@
                     $novo_nome = 'img' .$i.$extensao;
                        
                     
-                    $diretorio = 'imagens/nome_da_moto/';
+                    $diretorio = '../controller/imagens/nome_da_moto/';
                     
 
                     move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
-        //}
+        }
                     
                 }
 

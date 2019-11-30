@@ -1,5 +1,6 @@
 <?php 
-include 'menu.php';  ?>
+include 'menu.php'; 
+$nomeMoto=''; ?>
 
  <body ng-app="crudApp" ng-controller="crudController">
 		
@@ -23,6 +24,7 @@ include 'menu.php';  ?>
 							<th>Valor</th>
 							<th>Ano</th>
 							<th>Descrição</th>
+							<th>Imagens</th>
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>
@@ -33,6 +35,7 @@ include 'menu.php';  ?>
 							<td>{{name.Valor}}</td>
 							<td>{{name.Ano}}</td>
 							<td>{{name.Descricao}}</td>
+							<td><button type="button" ng-click="img(name.idMoto)" ng-click="$nomeMoto=name.idMoto" class="btn btn-warning btn-xs">Imagem</button></td>
 							<td><button type="button" ng-click="fetchSingleData(name.idMoto)" class="btn btn-warning btn-xs">Edit</button></td>
 							<td><button type="button" ng-click="deleteData(name.idMoto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
@@ -73,26 +76,7 @@ include 'menu.php';  ?>
 						<label>Enter Descrição</label>
 						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
 					</div>
-					<div class="form-group">
-						<label>Enter Img1</label>
-						<input type="file" name="arquivo0" ng-model="arquivo0"  />
-					</div>
-					<div class="form-group">
-						<label>Enter Img2</label>
-						<input type="file" name="arquivo1" ng-model="arquivo1"/>
-					</div>
-					<div class="form-group">
-						<label>Enter Img3</label>
-						<input type="file" name="arquivo2" ng-model="arquivo2"/>
-					</div>
-					<div class="form-group">
-						<label>Enter Img4</label>
-						<input type="file" name="arquivo3" ng-model="arquivo3" />
-					</div>
-					<div class="form-group">
-						<label>Enter Img5</label>
-						<input type="file" name="arquivo4"ng-model="arquivo4" />
-					</div>
+					
 	      		</div>
 	      		<div class="modal-footer">
 	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
@@ -105,7 +89,52 @@ include 'menu.php';  ?>
 </div>
 
 
+<div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+    		<form action="viewCadastroMoto.php" method="POST" enctype="multipart/form-data">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">{{modalTitle}}</h4>
+	      		</div>
+	      		<div class="modal-body">
+	      			<div class="alert alert-danger alert-dismissible" ng-show="error" >
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						{{errorMessage}}
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo0" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo1"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo2"  />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo3" />
+					</div>
+					<div class="form-group">
+						<label>Enter Img</label>
+						<input type="file" name="arquivo4"  />
+					</div>
 
+					
+	      		</div>
+	      		<div class="modal-footer">
+	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
+	      			<input type="submit" name="submit" id="submit" class="btn btn-info" value="{{submit_button}}" />
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        	</div>
+	        </form>
+    	</div>
+  	</div>
+</div>
+	
 
 <script>
 
@@ -132,6 +161,16 @@ app.controller('crudController', function($scope, $http){
 		modal_popup.modal('hide');
 	};
 
+	$scope.openModalImg = function(){
+		var modal_popup = angular.element('#crudmodalImg');
+		modal_popup.modal('show');
+	};
+
+	$scope.closeModalImg = function(){
+		var modal_popup = angular.element('#crudmodalImg');
+		modal_popup.modal('hide');
+	};
+
 	$scope.addData = function(){
 		$scope.modalTitle = 'Add Data';
 		$scope.submit_button = 'Insert';
@@ -142,7 +181,7 @@ app.controller('crudController', function($scope, $http){
 		$http({
 			method:"POST",
 			url:"../model/motosModel.php",
-			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,"arquivo0":$scope.arquivo0,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
+			data:{'Nome':$scope.Nome, 'Valor':$scope.Valor,'Ano':$scope.Ano,'Descricao':$scope.Descricao,'action':$scope.submit_button, 'idMoto':$scope.hidden_id}
 		}).success(function(data){
 			if(data.error != '')
 			{
@@ -162,6 +201,17 @@ app.controller('crudController', function($scope, $http){
 		});
 	};
 
+$scope.img = function(idMoto){
+		$http({
+			method:"POST",
+			url:"../model/motosModel.php",
+			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
+		}).success(function(data){			
+			$scope.modalTitle = 'Salva Imagem';
+			$scope.submit_button = 'Salvar';
+			$scope.openModalImg();
+		});
+	};
 	$scope.fetchSingleData = function(idMoto){
 		$http({
 			method:"POST",
@@ -172,7 +222,6 @@ app.controller('crudController', function($scope, $http){
 			$scope.Valor = data.Valor;
 			$scope.Ano = data.Ano;
 			$scope.Descricao = data.Descricao;
-			$scope.arquivo0 = data.arquivo0;
 			$scope.hidden_id = idMoto;
 			$scope.modalTitle = 'Edit Data';
 			$scope.submit_button = 'Edit';
@@ -202,6 +251,12 @@ app.controller('crudController', function($scope, $http){
 
 
 
+<?php require_once("../controller/controller_salvaimg.php"); 
+echo "$nomeMoto";
+$obj1 = new SalvaImagem();
+        $obj1->imagens($nomeMoto);
+
+  ?>
 
 
 

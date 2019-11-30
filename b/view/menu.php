@@ -35,7 +35,7 @@
     <!--<link rel="stylesheet" href="https://http2.mlstatic.com/resources/frontend/web-vip/ui-dist/css/core__large-be626ca46c.css">
     <link rel="stylesheet" href=t.css">-->
     
-    <script src="https://realmotosserver.000webhostapp.com/public_html/htdocs/JSviewProduto.js"></script>
+    <script src="https://realmotosserver.000webhostapp.com/htdocs/JSviewProduto.js"></script>
 
 
 </head>

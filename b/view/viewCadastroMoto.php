@@ -1,7 +1,7 @@
 <?php 
 include 'menu.php'; 
 $nomeMoto=""; 
- require_once("../model/upImageModel.php");
+ 
   require_once("../controller/controller_salvaimg.php");
  $obj2 = new SalvaImagem(); 
 error_reporting(0);

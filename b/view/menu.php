@@ -40,7 +40,36 @@
     <script src="https://realmotosserver.000webhostapp.com/htdocs/JSviewProduto.js"></script>
     <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
 	  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    
+    <style type="text/css">
+      section{
+        background: white;
+        width: 75%;
+        float: left;
+        margin-left: 14%;
+        margin-top: 3%;
+
+      }
+      article{
+        background: white;
+        width: 32%;
+        height: 310px;    
+        float: left;
+        margin: 3px;
+        padding: 5px;
+      }
+      .button {
+        background-color: #333;
+        border: none;
+        color: white;
+        padding: 30px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
 
 </head>
 
@@ -148,6 +177,23 @@
   </script>
 
 </nav>
+
+
+
+<section>
+    <h1>O que deseja fazer?</h1>
+    <br>
+    <article>
+      <a href="#" class="button"><i class="button2"></i>Button</a> 
+    </article>
+    <article>
+      <a href="#" class="button">Button</a>
+    </article>
+    <article>
+      <a href="#" class="button">Button</a>
+    </article>
+  </section>
+
 
 
 

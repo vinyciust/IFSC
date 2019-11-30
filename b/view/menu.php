@@ -41,7 +41,7 @@
     <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
 	  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <style type="text/css">
-      section{
+  /*   section{
         background: white;
         width: 75%;
         float: left;
@@ -69,7 +69,7 @@
         margin: 4px 2px;
         cursor: pointer;
       }
-    </style>
+    </style>*/
 
 </head>
 
@@ -179,7 +179,7 @@
 </nav>
 
 
-
+/*
 <section>
     <h1>O que deseja fazer?</h1>
     <br>
@@ -193,7 +193,7 @@
       <a href="#" class="button">Button</a>
     </article>
   </section>
-
+*/
 
 
 

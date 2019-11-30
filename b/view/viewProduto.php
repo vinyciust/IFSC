@@ -112,10 +112,20 @@ include 'menu.php';
 
 
 <section id="aside">
-Nome do Produto:
-Valor:
-Isso Awe
-TESTE
+
+<article id="dados">
+<h1>Nome do Produto:</h1>
+<p>Valor:</p>
+<p>Isso Awe</p>
+<p>TESTE</p>
+</article>
+
+<article id="botaoCompra">
+
+<a href="IFSC\b\index.php">Comprar</a>
+
+</article>
+
 </section>
 
 

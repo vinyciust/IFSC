@@ -34,23 +34,15 @@ include 'menu.php';
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="active item">
-                        <img src="img/img1.jpg" class="img-responsive">
+                        <img src="img/cg150img1.jpg" class="img-responsive">
                     </div>
                     <div class="item">
-                        <img src="img/img2.jpg" class="img-responsive">
+                        <img src="img/cg150img2.jpg" class="img-responsive">
                     </div>
                     <div class="item">
-                        <img src="img/img3.jpg" class="img-responsive">
+                        <img src="img/cg150img3.jpg" class="img-responsive">
                     </div>
-					<div class="item">
-                        <img src="img/img2.jpg" class="img-responsive">
-                    </div>
-					<div class="item">
-                        <img src="img/img2.jpg" class="img-responsive">
-                    </div>
-					<div class="item">
-                        <img src="img/img2.jpg" class="img-responsive">
-                    </div>
+					
                 </div>
 
 
@@ -71,23 +63,14 @@ include 'menu.php';
                 <!-- Carousel items -->
                 <div class="carousel-inner vertical">
                     <div class="active item">
-                        <img src="img/img1.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="0">
+                        <img src="img/cg150img1.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="0">
                     </div>
                     <div class="item">
-                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
+                        <img src="img/cg150img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
                     </div>
                     <div class="item">
-                        <img src="img/img3.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="2">
-                    </div>
-					<div class="item">
-                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
-                    </div>
-					<div class="item">
-                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
-                    </div>
-					<div class="item">
-                        <img src="img/img2.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="1">
-                    </div>
+                        <img src="img/cg150img3.jpg" class="img-responsive" data-target="#carousel-main" data-slide-to="2">
+                   
                 </div>
                 
                 <!-- Controls -->

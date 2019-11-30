@@ -33,7 +33,7 @@
                     $diretorio = 'imagens/nome_da_moto/';
                     
 
-                    move_uploaded_file($_FILES[':arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
+                    move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);
         //}
                     
                 }
@@ -41,31 +41,9 @@
             
         }
     }
-    $msg = false;
+    
     
 ?>
-
-    <!--<h1>Upload de arquivos</h1>
-    
-    <?php if ($msg != false) {
-        echo "<p> $msg </p>"; }
-
-        
-        $obj1 = new SalvaImagem();
-        $obj1->imagens();
-    ?>
-
-    <form action="controller_salvaimg.php" method="POST" enctype="multipart/form-data">
-        Arquivo: <input type="file" required name="arquivo0"> </br>
-        Arquivo: <input type="file" required name="arquivo1"></br>
-        Arquivo: <input type="file" required name="arquivo2"></br>
-        Arquivo: <input type="file" required name="arquivo3"></br>
-        Arquivo: <input type="file" required name="arquivo4"></br>
-        Arquivo: <input type="file" required name="arquivo5"></br></br>
-        <input type="submit" value="Salvar">
-
-
-    </form> -->
 
 
 

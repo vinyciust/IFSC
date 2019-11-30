@@ -1,8 +1,9 @@
 <?php 
 include 'menu.php'; 
 $nomeMoto=""; 
- require_once("../controller/controller_salvaimg.php");
- $obj1 = new SalvaImagem(); ?>
+ require_once("../model/upImageModel.php");
+  require_once("../controller/controller_salvaimg.php");
+ $obj2 = new SalvaImagem(); ?>
 
 
  <body ng-app="crudApp" ng-controller="crudController">
@@ -95,7 +96,7 @@ $nomeMoto="";
 <div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
 	<div class="modal-dialog" role="document">
     	<div class="modal-content">
-    		<form action="viewCadastroMoto.php?" method="POST" enctype="multipart/form-data">
+    		<form action="viewCadastroMoto.php" method="get" enctype="multipart/form-data">
 	      		<div class="modal-header">
 	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        		<h4 class="modal-title">{{modalTitle}}</h4>
@@ -104,6 +105,10 @@ $nomeMoto="";
 	      			<div class="alert alert-danger alert-dismissible" ng-show="error" >
 						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 						{{errorMessage}}
+					</div>
+					<div class="form-group">
+						<label>Enter nome da moto</label>
+						<input type="text" name="nomeMoto" ng-model="nomeMoto" class="form-control" />
 					</div>
 					<div class="form-group">
 						<label>Enter Img</label>
@@ -125,6 +130,8 @@ $nomeMoto="";
 						<label>Enter Img</label>
 						<input type="file" name="arquivo4"  />
 					</div>
+
+
 				
 				
 				
@@ -213,11 +220,11 @@ $scope.img = function(idMoto){
 			url:"../model/motosModel.php",
 			data:{'idMoto':idMoto, 'action':'fetch_single_data'}
 		}).success(function(data){	
-			$nomeMoto = data.Nome;				
+			$scope.nomeMoto = data.Nome;				
 			$scope.modalTitle = 'Salva Imagem';
 			$scope.submit_button = 'Salvar';
 			$scope.openModalImg();
-		<?php $obj1->set($nomeMoto);?>
+
 		});
 		
 	};			
@@ -259,7 +266,7 @@ $scope.img = function(idMoto){
 </script>
 
 
-<?php $obj1->imagens(); ?>
+<?php $obj2->cmd()  ?> 
 
 
 

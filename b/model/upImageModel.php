@@ -3,22 +3,22 @@
     class SalvaImagemModel {
      public $nome_da_moto="";
         //require_once("../model/motos_model.php");
+       
+
         public function setNome($nome_da_moto){
 
-               $nome_da_moto="";
+
 
             $this->$nome_da_moto=$nome_da_moto;
-           
         }
 
           public function getNome() {
-    return $this->$nome_da_moto;}
+        return $this->nome_da_moto;}
 
-        public function imagens(){
+        public function imagens($nomeMoto){
            
-            $nomeMoto = getNome();
-             echo $this->$nomeMoto;
-            include("conexaoTeste.php");
+            
+           // include("conexaoTeste.php");
             
             //$msg = false;
             
@@ -29,7 +29,7 @@
                 }
                 else{
                         echo 'A Pasta não Existe';
-                        mkdir(__DIR__."../controller/imagens/$nomeMoto", 0777, true);
+                        mkdir(__DIR__."../controller/imagens/$nomeMoto/", 0777, true);
                     }
 
                 for ($i=0; $i <5 ; $i++) { 

@@ -13,12 +13,22 @@
   
 </footer>
 -->
+<?php 
+ $logo= "";
+if(file_exists("../img/logo.png")) {
+
+          $logo ='../img/logo.png'; 
+              
+          }else{
+          $logo ='./img/logo.png';
+          
+        }    ?>
 
 <div class="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="img/logo.png" alt="Image" class="img-fluid"></p>
+            <p class="mb-4"><img src=<?php echo "$logo";?> alt="Image" class="img-fluid"></p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
             <p><a href="#">Learn More</a></p>
           </div>

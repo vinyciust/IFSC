@@ -93,7 +93,7 @@ $obj2->cmd($nomeProduto);
 <div class="modal fade" tabindex="-1" role="dialog" id="crudmodalImg">
 	<div class="modal-dialog" role="document">
     	<div class="modal-content">
-    		<form action="viewCadastroMoto.php" method="POST" enctype="multipart/form-data">
+    		<form action="viewCadastroProduto.php" method="POST" enctype="multipart/form-data">
 	      		<div class="modal-header">
 	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        		<h4 class="modal-title">{{modalTitle}}</h4>

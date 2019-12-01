@@ -12,13 +12,13 @@ class SalvaImagem {
             //$msg = false;
             
             if($nome !=null){
-              if(is_dir('../controller/imagens/$nome'))
+              if(is_dir('../view/img/$nome'))
                 {
                    
                 }
                 else{
                         
-                        mkdir("../controller/imagens/$nome", 0777, true);
+                        mkdir("../view/img/$nome", 0777, true);
                     }
 
                 for ($i=0; $i <5 ; $i++) { 
@@ -31,7 +31,7 @@ class SalvaImagem {
                     $novo_nome = 'img' .$i.$extensao;
                        
                     
-                    $diretorio = "../controller/imagens/$nome/";
+                    $diretorio = "../view/img/$nome/";
                     
 
                     move_uploaded_file($_FILES['arquivo'.$i]['tmp_name'], $diretorio.$novo_nome);

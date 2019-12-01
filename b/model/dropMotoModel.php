@@ -49,13 +49,19 @@ class geraPaginaProdutoModel{
                 <!-- Carousel items -->
                 <div class='carousel-inner'>
                     <div class='active item'>
-                        <img src='img/cg150img1.jpg' class='img-responsive'>
+                        <img src='../view/img/".$row["Nome"]."/img0.png' class='img-responsive'>
                     </div>
                     <div class='item'>
-                        <img src='img/cg150img2.jpg' class='img-responsive'>
+                        <img src='../view/img/".$row["Nome"]."/img1.png' class='img-responsive'>
                     </div>
                     <div class='item'>
-                        <img src='img/cg150img3.jpg' class='img-responsive'>
+                        <img src='../view/img/".$row["Nome"]."/img2.png' class='img-responsive'>
+                    </div>
+                    <div class='item'>
+                        <img src='../view/img/".$row["Nome"]."/img3.png' class='img-responsive'>
+                    </div>
+                    <div class='item'>
+                        <img src='../view/img/".$row["Nome"]."/img4.png' class='img-responsive'>
                     </div>
 					
                 </div>
@@ -78,13 +84,19 @@ class geraPaginaProdutoModel{
                 <!-- Carousel items -->
                 <div class='carousel-inner vertical'>
                     <div class='active item'>
-                        <img src='img/cg150img1.jpg' class='img-responsive' data-target='#carousel-main' data-slide-to='0'>
+                        <img src='../view/img/".$row["Nome"]."/img0.png' class='img-responsive' data-target='#carousel-main' data-slide-to='0'>
                     </div>
                     <div class='item'>
-                        <img src='img/cg150img2.jpg' class='img-responsive' data-target='#carousel-main' data-slide-to='1'>
+                        <img src='../view/img/".$row["Nome"]."/img1.png' class='img-responsive' data-target='#carousel-main' data-slide-to='1'>
                     </div>
                     <div class='item'>
-                        <img src='img/cg150img3.jpg' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
+                        <img src='../view/img".$row["Nome"]."/img2.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
+                   </div>
+                   <div class='item'>
+                        <img src='../view/img/".$row["Nome"]."/img3.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
+                   </div>
+                   <div class='item'>
+                        <img src='../view/img/".$row["Nome"]."/img4.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
                    </div>
                 </div>
                 
@@ -134,14 +146,18 @@ class geraPaginaProdutoModel{
 
 </section>
 
+";$j=0;
+if ($j==0){
+				if(file_exists("../view/about.php")) {
 
-
-        				<tr>
-        <td>".$row["Nome"]."</td>
-        <td>".$row["Descricao"]."</td> </br>
-        
-        </tr>";
-
+        	include '../view/about.php'; 
+        	include '../view/footer.php';  		
+        	}else{
+        	include './view/about.php';
+        	include './view/footer.php'; 
+        }		$j++;
+			}
+       
         				}
 
         				 $result->close();

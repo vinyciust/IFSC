@@ -5,7 +5,7 @@ $nomeProduto="";
  require_once("../controller/controller_salvaimg.php");
  $obj2 = new SalvaImagem(); 
 error_reporting(0);
- $nomeMoto=$_POST['nomeProduto'];
+ $nomeProduto=$_POST['nomeProduto'];
 $obj2->cmd($nomeProduto);
  ?>
 

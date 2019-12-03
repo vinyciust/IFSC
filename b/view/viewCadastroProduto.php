@@ -105,7 +105,7 @@ $obj2->cmd($nomeProduto);
 					</div>
 					<div class="form-group">
 						<label>Insira nome do produto</label>
-						<input type="text" name="nomeMoto" id="nomeProduto" ng-model="nomeProduto" class="form-control" />
+						<input type="text" name="nomeProduto" id="nomeProduto" ng-model="nomeProduto" class="form-control" />
 					</div>
 					<div class="form-group">
 						<label>Insira imagem</label>

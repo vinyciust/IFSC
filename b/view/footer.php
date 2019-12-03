@@ -29,7 +29,7 @@ if(file_exists("../img/logo.png")) {
         <div class="row">
           <div class="col-lg-3">
             <p class="mb-4"><img src=<?php echo "$logo";?> alt="Image" class="img-fluid"></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
+            <p>A REAL MOTOS é uma mecânica de motocicletas que esta presente no mercado Chapecoense desde 1998.</p>  
             <p><a href="#">Learn More</a></p>
           </div>
           <div class="col-lg-3">

@@ -121,23 +121,23 @@
     </div>
   </div> 
 
+<?php 
+        $a= "";
+        if(file_exists("../view/viewCadastros.php")) {
+
+          $a ='../view/viewCadastros.php'; 
+              
+          }else{
+          $a ='./view/viewCadastros.php';
+          
+        }    
+      ?>
  
 <section id="login">
   <a href="#" id="login" onclick="openForm()"><i class="fa fa-fw fa-user"></i> Login</a>
 
   <div class="form-popup" id="myForm">
-    <form action="view/viewCadastros.php>" class="form-container">
-      <?php 
-        $a= "";
-        if(file_exists("view/menu.php")) {
-
-          $a ='view/menu.php'; 
-              
-          }else{
-          $a ='../view/menu.php';
-          
-        }    
-      ?>
+    <form action=<?php echo $a; ?> class="form-container">      
       <h1>Login</h1>
 
       <label for="email"><b>Email</b></label>
@@ -146,7 +146,7 @@
       <label for="psw"><b>Senha</b></label>
       <input type="password" placeholder="Insira sua senha" name="psw" required>
 
-      <button href="#" src=<?php echo "$a";?> type="submit" class="btn">Login</button>
+      <button type="submit" class="btn">Login</button>
 
       <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
     </form>

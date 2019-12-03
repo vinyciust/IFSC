@@ -124,7 +124,7 @@ require_once ("../model/banco.php");
 
 <article id='dados'>
 <h1>Nome do Produto: ".$row["Nome"]."</h1>
-<h3><p>Valor: ".$row["Valor"]."</p>
+<h3><p>Valor:R$ ".$row["Valor"]."</p>
 <p></p>
 <p>Descrição:".$row["Descricao"]."</br>
 </p></h3>

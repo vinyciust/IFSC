@@ -30,7 +30,7 @@ if(file_exists("../img/logo.png")) {
           <div class="col-lg-3">
             <p class="mb-4"><img src=<?php echo "$logo";?> alt="Image" class="img-fluid"></p>
             <p>A REAL MOTOS é uma mecânica de motocicletas que esta presente no mercado Chapecoense desde 1998.</p>  
-            <p><a href="#">Learn More</a></p>
+            <p><a href="#">Descubra mais</a></p>
           </div>
           <div class="col-lg-3">
             <h3 class="footer-heading"><span>Nossa Empresa</span></h3>
@@ -51,7 +51,7 @@ if(file_exists("../img/logo.png")) {
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contatos</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="#"><i class="fa  fa-phone"></i> Telefone:(49) 0000-0000</a></li>
+                  <li><a href="#"><i class="fa  fa-phone"></i> Telefone:(49) 3329-0492</a></li>
                   <li><a href="https://www.facebook.com/realmotos1998"><i class="fa fa-facebook-official"></i> Facebook</a></li>
                   <li><a href="#"><i class="fa  fa-whatsapp"></i> Whats</a></li>
               </ul>

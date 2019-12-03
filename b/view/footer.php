@@ -52,7 +52,7 @@ if(file_exists("../img/logo.png")) {
               <h3 class="footer-heading"><span>Contatos</span></h3>
               <ul class="list-unstyled">
                   <li><a href="#"><i class="fa  fa-phone"></i> Telefone:(49) 0000-0000</a></li>
-                  <li><a href="#"><i class="fa fa-facebook-official"></i> Facebook</a></li>
+                  <li><a href="https://www.facebook.com/realmotos1998"><i class="fa fa-facebook-official"></i> Facebook</a></li>
                   <li><a href="#"><i class="fa  fa-whatsapp"></i> Whats</a></li>
               </ul>
           </div>

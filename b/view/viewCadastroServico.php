@@ -12,7 +12,7 @@ include 'menu.php';  ?>
 				{{successMessage}}
 			</div>
 			<div align="right">
-				<button type="button" name="add_button" ng-click="addData()" class="btn btn-success">Add</button>
+				<button type="button" name="add_button" ng-click="addData()" class="btn btn-success">Adicionar</button>
 			</div>
 			<br />
 			<div class="table-responsive" style="overflow-x: unset;">
@@ -29,7 +29,7 @@ include 'menu.php';  ?>
 						<tr ng-repeat="name in namesData">
 							<td>{{name.Nome}}</td>							
 							<td>{{name.Descricao}}</td>
-							<td><button type="button" ng-click="fetchSingleData(name.idServico)" class="btn btn-warning btn-xs">Edit</button></td>
+							<td><button type="button" ng-click="fetchSingleData(name.idServico)" class="btn btn-warning btn-xs">Editar</button></td>
 							<td><button type="button" ng-click="deleteData(name.idServico)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
 					</tbody>
@@ -54,18 +54,18 @@ include 'menu.php';  ?>
 						{{errorMessage}}
 					</div>
 					<div class="form-group">
-						<label>Enter Nome</label>
+						<label>Insira nome</label>
 						<input type="text" name="Nome" ng-model="Nome" class="form-control" />
 					</div>					
 					<div class="form-group">
-						<label>Enter Descrição</label>
+						<label>Insira descrição</label>
 						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
 					</div>
 	      		</div>
 	      		<div class="modal-footer">
 	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
 	      			<input type="submit" name="submit" id="submit" class="btn btn-info" value="{{submit_button}}" />
-	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 	        	</div>
 	        </form>
     	</div>

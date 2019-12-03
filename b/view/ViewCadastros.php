@@ -32,6 +32,7 @@ include '.\menu.php';  ?>
         float: left;
         margin: 3px;
         padding: 5px;
+        padding-left: 9%;
       }
      #Cadastros .button {
         background-color: #333;

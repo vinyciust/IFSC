@@ -22,7 +22,7 @@ $obj2->cmd($nomeProduto);
 				{{successMessage}}
 			</div>
 			<div align="right">
-				<button type="button" name="add_button" ng-click="addData()" class="btn btn-success">Add</button>
+				<button type="button" name="add_button" ng-click="addData()" class="btn btn-success">Adicionar</button>
 			</div>
 			<br />
 			<div class="table-responsive" style="overflow-x: unset;">
@@ -43,7 +43,7 @@ $obj2->cmd($nomeProduto);
 							<td>{{name.Valor}}</td>							
 							<td>{{name.Descricao}}</td>
 							<td><button type="button" ng-click="img(name.idProduto)" class="btn btn-success btn-xs">Imagem</button></td>
-							<td><button type="button" ng-click="fetchSingleData(name.idProduto)" class="btn btn-warning btn-xs">Edit</button></td>
+							<td><button type="button" ng-click="fetchSingleData(name.idProduto)" class="btn btn-warning btn-xs">Editar</button></td>
 							<td><button type="button" ng-click="deleteData(name.idProduto)" class="btn btn-danger btn-xs">Delete</button></td>
 						</tr>
 					</tbody>
@@ -68,22 +68,22 @@ $obj2->cmd($nomeProduto);
 						{{errorMessage}}
 					</div>
 					<div class="form-group">
-						<label>Enter Nome</label>
+						<label>Insira nome</label>
 						<input type="text" name="Nome" ng-model="Nome" class="form-control" />
 					</div>
 					<div class="form-group">
-						<label>Enter Valor</label>
+						<label>Insira valor</label>
 						<input type="text" name="Valor" ng-model="Valor" class="form-control" />
 					</div>					
 					<div class="form-group">
-						<label>Enter Descrição</label>
+						<label>Insira descrição</label>
 						<input type="text" name="Descricao" ng-model="Descricao" class="form-control" />
 					</div>
 	      		</div>
 	      		<div class="modal-footer">
 	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
 	      			<input type="submit" name="submit" id="submit" class="btn btn-info" value="{{submit_button}}" />
-	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 	        	</div>
 	        </form>
     	</div>
@@ -104,27 +104,27 @@ $obj2->cmd($nomeProduto);
 						{{errorMessage}}
 					</div>
 					<div class="form-group">
-						<label>Enter nome da moto</label>
+						<label>Insira nome do produto</label>
 						<input type="text" name="nomeMoto" id="nomeProduto" ng-model="nomeProduto" class="form-control" />
 					</div>
 					<div class="form-group">
-						<label>Enter Img</label>
+						<label>Insira imagem</label>
 						<input type="file" name="arquivo0"  />
 					</div>
 					<div class="form-group">
-						<label>Enter Img</label>
+						<label>Insira imagem</label>
 						<input type="file" name="arquivo1"  />
 					</div>
 					<div class="form-group">
-						<label>Enter Img</label>
+						<label>Insira imagem</label>
 						<input type="file" name="arquivo2"  />
 					</div>
 					<div class="form-group">
-						<label>Enter Img</label>
+						<label>Insira imagem</label>
 						<input type="file" name="arquivo3" />
 					</div>
 					<div class="form-group">
-						<label>Enter Img</label>
+						<label>Insira imagem</label>
 						<input type="file" name="arquivo4"  />
 					</div>
 
@@ -137,7 +137,7 @@ $obj2->cmd($nomeProduto);
 	      		<div class="modal-footer">
 	      			<input type="hidden" name="hidden_id" value="{{hidden_id}}" />
 	      			<input type="submit" name="submit" id="submit" class="btn btn-info" value="{{submit_button}}" />
-	        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 	        	</div>
 	        </form>
     	</div>

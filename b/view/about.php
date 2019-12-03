@@ -1,7 +1,7 @@
 <section id="About"><!-- About Section -->
 
 <section class="w3-container" style="padding:2% 5%" id="about">
-  <h3 class="w3-center">SOBRE REAL MOTOS</h3>
+  <h3 class="w3-center">Sobre Real Motos</h3>
   <p class="w3-center w3-large">Desde 1998 preocupado com seu bem estar </p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">

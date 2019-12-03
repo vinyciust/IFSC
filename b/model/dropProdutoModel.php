@@ -89,7 +89,7 @@ require_once ("../model/banco.php");
                         <img src='../view/img/".$row["Nome"]."/img1.png' class='img-responsive' data-target='#carousel-main' data-slide-to='1'>
                     </div>
                     <div class='item'>
-                        <img src='../view/img".$row["Nome"]."/img2.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
+                        <img src='../view/img/".$row["Nome"]."/img2.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
                    </div>
                    <div class='item'>
                         <img src='../view/img/".$row["Nome"]."/img3.png' class='img-responsive' data-target='#carousel-main' data-slide-to='3'>

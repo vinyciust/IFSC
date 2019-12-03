@@ -56,7 +56,6 @@
 <nav class="MenuNavReal">
   <a id="logo"><i class="fa"><img src="https://scontent.fxap3-1.fna.fbcdn.net/v/t1.0-9/27973392_358211404681466_4613216062072862129_n.png?_nc_cat=104&_nc_ohc=ETe50krQSEUAQkQjJlwcikGWGZllToPbpHONt2TS6kNn6hgGVvTcmHkCA&_nc_ht=scontent.fxap3-1.fna&oh=b3913bcbd9e83c8d455decbdfab87ea8&oe=5E835125"/></i></a> <!-- Botar a logo via html e editar via css -->
   <a href="#home" id="btnReal">Home</a>
-  <a href="#news">Notícias</a>
   <div class="dropdownReal">
     <button class="dropbtnReal">Motos 
       <i class="fa fa-caret-down"></i>
@@ -136,7 +135,18 @@
       <label for="psw"><b>Senha</b></label>
       <input type="password" placeholder="Insira sua senha" name="psw" required>
 
-      <button type="submit" class="btn">Login</button>
+      <button type="submit" class="btn" 
+      <?php if(file_exists("../controller/dropController.php")) {
+
+        require_once ("../controller/dropController.php");
+
+        } else {
+
+        require_once ("./controller/dropController.php");
+
+        } ?>
+        >Login</button>
+
       <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
     </form>
   </div>

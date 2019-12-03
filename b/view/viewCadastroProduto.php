@@ -9,7 +9,7 @@ error_reporting(0);
 $obj2->cmd($nomeProduto);
  ?>
 
- ?>
+
 
  <body ng-app="crudApp" ng-controller="crudController">
 		

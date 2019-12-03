@@ -93,10 +93,10 @@ class geraPaginaProdutoModel{
                         <img src='../view/img".$row["Nome"]."/img2.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
                    </div>
                    <div class='item'>
-                        <img src='../view/img/".$row["Nome"]."/img3.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
+                        <img src='../view/img/".$row["Nome"]."/img3.png' class='img-responsive' data-target='#carousel-main' data-slide-to='3'>
                    </div>
                    <div class='item'>
-                        <img src='../view/img/".$row["Nome"]."/img4.png' class='img-responsive' data-target='#carousel-main' data-slide-to='2'>
+                        <img src='../view/img/".$row["Nome"]."/img4.png' class='img-responsive' data-target='#carousel-main' data-slide-to='4'>
                    </div>
                 </div>
                 

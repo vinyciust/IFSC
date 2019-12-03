@@ -138,7 +138,7 @@
 
   <div class="form-popup" id="myForm">
     <form action=<?php echo $a; ?> class="form-container">      
-      <h1>Login</h1>
+      <h1>Login (administrador)</h1>
 
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Insira seu Email" name="email" required>
